@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candosa Design Process</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(to bottom, #f8fafc, #fff); color: #0f172a; padding: 24px; min-height: 100vh; }
+  .container { max-width: 672px; margin: 0 auto; }
+  .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin-bottom: 8px; }
+  h1 { font-size: 28px; font-weight: 700; }
+  .subtitle { margin-top: 8px; font-size: 15px; color: #64748b; line-height: 1.5; }
+  .phases { margin-top: 32px; }
+
+  /* Phase cards */
+  .phase-wrap { position: relative; cursor: pointer; }
+  .phase-wrap:hover .phase-card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .phase-card { position: relative; z-index: 10; border-radius: 12px; padding: 20px; transition: box-shadow 0.2s, border-color 0.2s; }
+  .phase-header { display: flex; align-items: flex-start; justify-content: space-between; }
+  .phase-left { display: flex; align-items: center; gap: 12px; }
+  .phase-icon { display: flex; height: 40px; width: 40px; align-items: center; justify-content: center; border-radius: 8px; font-size: 20px; }
+  .phase-num { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .phase-name { font-size: 18px; font-weight: 600; margin-top: 2px; }
+  .phase-sub { margin-top: 8px; font-size: 14px; }
+  .phase-arrow { display: flex; height: 24px; width: 24px; align-items: center; justify-content: center; border-radius: 50%; font-size: 12px; transition: transform 0.2s; }
+  .phase-arrow.open { transform: rotate(90deg); }
+  .phase-details { overflow: hidden; max-height: 0; opacity: 0; transition: max-height 0.3s, opacity 0.3s, margin-top 0.3s; }
+  .phase-details.open { max-height: 500px; opacity: 1; margin-top: 16px; }
+  .detail-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .detail-dot { margin-top: 6px; height: 6px; width: 6px; flex-shrink: 0; border-radius: 50%; }
+  .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .tool-tag { border-radius: 6px; padding: 2px 8px; font-size: 12px; font-weight: 500; }
+
+  /* Zone wrappers */
+  .freedom-zone { position: absolute; inset: -12px; border-radius: 16px; border: 2px dashed #93c5fd; z-index: 0; transition: opacity 0.2s; opacity: 0.4;
+    background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(59,130,246,0.2), rgba(249,115,22,0.15)); }
+  .phase-wrap:hover .freedom-zone, .phase-wrap.active .freedom-zone { opacity: 1; }
+  .gate-zone { position: absolute; inset: -12px; border-radius: 16px; border: 2px solid #10b981; z-index: 0; transition: opacity 0.2s; opacity: 0.4;
+    background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(34,197,94,0.08)); }
+  .phase-wrap:hover .gate-zone, .phase-wrap.active .gate-zone { opacity: 1; }
+  .zone-label { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); white-space: nowrap; border-radius: 9999px; padding: 2px 12px; font-size: 12px; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .zone-label-blue { background: #dbeafe; color: #1d4ed8; }
+  .zone-label-green { background: #d1fae5; color: #065f46; }
+
+  /* Arrows */
+  .arrow-wrap { position: relative; z-index: 20; display: flex; flex-direction: column; align-items: center; padding: 2px 0; }
+  .arrow-down svg { display: block; }
+  .reshape-pill { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; padding: 6px 16px; background: rgba(249,115,22,0.08); border: 1px dashed #f97316; margin-bottom: 2px; }
+  .reshape-pill span { font-size: 12px; font-weight: 500; color: #c2410c; }
+  .gate-label { display: inline-flex; align-items: center; gap: 8px; }
+  .gate-label span { border-radius: 9999px; background: #d1fae5; padding: 2px 10px; font-size: 12px; font-weight: 500; color: #065f46; }
+
+  /* Sections below */
+  .section { margin-top: 24px; border-radius: 12px; padding: 20px; }
+  .section-title { font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+
+  .who-section { border: 1px solid #e2e8f0; background: white; }
+  .who-row { display: flex; align-items: flex-start; gap: 12px; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+  .who-icon { margin-top: 2px; display: flex; height: 28px; width: 28px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 6px; font-size: 14px; }
+  .who-title { font-size: 14px; font-weight: 600; }
+  .who-desc { margin-top: 2px; font-size: 12px; }
+  .who-note { margin-top: 0; font-size: 12px; color: #64748b; }
+
+  .branch-section { border: 1px solid #e2e8f0; background: white; }
+  .branch-flow { display: flex; align-items: center; gap: 12px; overflow-x: auto; padding-bottom: 8px; flex-wrap: wrap; }
+  .branch-dot { height: 12px; width: 12px; border-radius: 50%; flex-shrink: 0; }
+  .branch-name { border-radius: 4px; background: #f1f5f9; padding: 2px 8px; font-size: 12px; color: #475569; font-family: monospace; white-space: nowrap; }
+  .branch-plus { color: #cbd5e1; }
+  .branch-box { display: flex; align-items: center; gap: 8px; border-radius: 8px; padding: 6px 12px; white-space: nowrap; }
+  .branch-box code { font-size: 12px; font-weight: 600; font-family: monospace; }
+  .branch-note { margin-top: 12px; font-size: 12px; color: #64748b; line-height: 1.5; }
+
+  .northstar-section { border: 1px solid #a7f3d0; background: #ecfdf5; }
+  .ns-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+  .ns-header span:last-child { font-size: 14px; font-weight: 600; color: #065f46; }
+  .ns-row { display: flex; align-items: center; gap: 12px; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+  .ns-label { font-size: 14px; font-weight: 600; }
+  .ns-desc { margin-left: 8px; font-size: 12px; color: #475569; }
+  .ns-note { margin-top: 4px; font-size: 12px; color: #065f46; }
+
+  .mock-section { border: 1px solid #bfdbfe; background: #eff6ff; padding: 16px; }
+  .mock-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .mock-badge { border-radius: 4px; background: #2563eb; padding: 2px 6px; font-size: 10px; font-weight: 500; color: white; }
+  .mock-header span:last-child { font-size: 14px; font-weight: 600; color: #1e3a8a; }
+  .mock-demo { position: relative; border-radius: 8px; background: white; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border: 1px solid #bfdbfe; color: #2563eb; }
+  .mock-demo-badge { position: absolute; top: -8px; right: 8px; border-radius: 4px; background: #2563eb; padding: 2px 6px; font-size: 10px; font-weight: 500; color: white; }
+  .mock-row { display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid #dbeafe; }
+  .mock-row:last-of-type { margin-bottom: 0; }
+  .mock-name { font-size: 14px; font-weight: 500; }
+  .mock-status { border-radius: 9999px; background: #dbeafe; padding: 2px 8px; font-size: 12px; }
+  .mock-gap { margin-top: 8px; font-size: 12px; color: #93c5fd; font-style: italic; }
+  .mock-note { margin-top: 12px; font-size: 12px; color: #1d4ed8; }
+
+  .guardrails { margin-top: 32px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; padding: 16px; }
+  .gr-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .gr-header span { font-size: 14px; font-weight: 600; color: #334155; }
+  .gr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+  .gr-item { border-radius: 8px; background: white; padding: 8px 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+  .gr-name { font-size: 12px; font-weight: 600; color: #334155; }
+  .gr-desc { font-size: 12px; color: #64748b; }
+
+  .footer { margin-top: 24px; text-align: center; font-size: 12px; color: #94a3b8; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="label">Candosa Design Process</div>
+  <h1>Shape &rarr; Prototype &rarr; Ship</h1>
+  <p class="subtitle">Freedom to prototype with fake data. Guardrails that track what&rsquo;s real and what&rsquo;s not. Nothing hits production until the gaps are filled.</p>
+
+  <div class="phases" id="phases"></div>
+
+  <!-- Who builds what -->
+  <div class="section who-section">
+    <div class="section-title" style="color:#334155">Who designs what</div>
+    <div class="who-row" style="background:#faf5ff; border:1px solid #e9d5ff;">
+      <div class="who-icon" style="background:#f3e8ff;">&#127912;</div>
+      <div>
+        <div class="who-title" style="color:#581c87;">Designer takes it</div>
+        <div class="who-desc" style="color:#7e22ce;">New interaction patterns, multi-step flows, onboarding, anything where visual hierarchy and emotional tone matter. Complex UX that needs exploration.</div>
+      </div>
+    </div>
+    <div class="who-row" style="background:#f0f9ff; border:1px solid #bae6fd; margin-bottom:0;">
+      <div class="who-icon" style="background:#e0f2fe;">&#9881;&#65039;</div>
+      <div>
+        <div class="who-title" style="color:#0c4a6e;">Dev takes it end-to-end</div>
+        <div class="who-desc" style="color:#0369a1;">Data tables, CRUD views, settings pages, admin tools &mdash; stories where the Data Contract defines the fields and fox-ui defines the look. Same /start &rarr; /end flow, same guardrails.</div>
+      </div>
+    </div>
+    <p class="who-note" style="margin-top:12px;">The Data Contract + guardrails mean devs can produce solid UI without a separate design pass. Don&rsquo;t create bottlenecks where a simple table view is waiting for design.</p>
+  </div>
+
+  <!-- Branch flow -->
+  <div class="section branch-section">
+    <div class="section-title" style="color:#334155">Branch flow</div>
+    <div class="branch-flow">
+      <span class="branch-dot" style="background:#8b5cf6;"></span><code class="branch-name">preview/invite-modal</code>
+      <span class="branch-plus">+</span>
+      <span class="branch-dot" style="background:#3b82f6;"></span><code class="branch-name">preview/dashboard-v2</code>
+      <span class="branch-plus">+</span>
+      <span class="branch-dot" style="background:#f97316;"></span><code class="branch-name">preview/onboarding-fix</code>
+      <svg width="32" height="20" viewBox="0 0 32 20" fill="none" style="flex-shrink:0;margin:0 4px;"><path d="M4 10H24" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/><path d="M20 5L26 10L20 15" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="branch-box" style="background:#ecfdf5; border:1px solid #6ee7b7;">
+        <span style="font-size:14px;">&#11088;</span><code style="color:#065f46;">northstar</code>
+      </div>
+      <svg width="32" height="20" viewBox="0 0 32 20" fill="none" style="flex-shrink:0;margin:0 4px;"><path d="M4 10H24" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/><path d="M20 5L26 10L20 15" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="branch-box" style="background:#f0fdf4; border:1px solid #86efac;">
+        <span style="font-size:14px;">&#128640;</span><code style="color:#166534;">main</code><span style="font-size:12px;color:#22c55e;">&rarr; prod</span>
+      </div>
+    </div>
+    <p class="branch-note">Preview branches let you prototype freely. Northstar combines them for team review. Only features that clear the gate get promoted to main &rarr; production. The rest stay held or go back for reshaping.</p>
+  </div>
+
+  <!-- Northstar sort -->
+  <div class="section northstar-section">
+    <div class="ns-header">
+      <span style="font-size:14px;">&#11088;</span>
+      <span>The Northstar gate &mdash; sorting what ships</span>
+    </div>
+    <div class="ns-row" style="background:#f0fdf4; border:1px solid rgba(22,163,74,0.15);">
+      <span style="font-size:16px;">&#128640;</span>
+      <div><span class="ns-label" style="color:#16a34a;">Ready to ship</span><span class="ns-desc">Gaps filled, quality checks pass, data contract satisfied</span></div>
+    </div>
+    <div class="ns-row" style="background:#fffbeb; border:1px solid rgba(217,119,6,0.15);">
+      <span style="font-size:16px;">&#9199;&#65039;</span>
+      <div><span class="ns-label" style="color:#d97706;">Hold in northstar</span><span class="ns-desc">has-mock-data label, Jira gap tickets open, needs API work</span></div>
+    </div>
+    <div class="ns-row" style="background:#fef2f2; border:1px solid rgba(220,38,38,0.15); margin-bottom:0;">
+      <span style="font-size:16px;">&#128260;</span>
+      <div><span class="ns-label" style="color:#dc2626;">Pull back &amp; reshape</span><span class="ns-desc">Conflicts with other features, UX doesn&rsquo;t hold up in combination</span></div>
+    </div>
+    <p class="ns-note">Everything before northstar optimizes for speed. This is where you get deliberate.</p>
+  </div>
+
+  <!-- Mock data demo -->
+  <div class="section mock-section">
+    <div class="mock-header">
+      <span class="mock-badge">MOCK</span>
+      <span>What mock data looks like in the UI</span>
+    </div>
+    <div class="mock-demo">
+      <span class="mock-demo-badge">MOCK</span>
+      <div class="mock-row"><span class="mock-name">Ana L&oacute;pez</span><span class="mock-status">Active</span></div>
+      <div class="mock-row" style="border-bottom:none;margin-bottom:0;padding-bottom:0;"><span class="mock-name">Carlos Ruiz</span><span class="mock-status">Pending</span></div>
+      <div class="mock-gap">gap: "Replace with useQuery(['clients'], () =&gt; clientsClient.listClients())"</div>
+    </div>
+    <p class="mock-note">Bright blue = fake data. Visible during prototyping, tracked by /end, turned into Jira tickets for engineering.</p>
+  </div>
+
+  <!-- Guardrails -->
+  <div class="guardrails">
+    <div class="gr-header">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L14.9282 5V11L8 15L1.07179 11V5L8 1Z" stroke="#64748B" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="#64748B"/></svg>
+      <span>Guardrails (always active)</span>
+    </div>
+    <div class="gr-grid">
+      <div class="gr-item"><div class="gr-name">CLAUDE.md</div><div class="gr-desc">Workflow rules</div></div>
+      <div class="gr-item"><div class="gr-name">design-system.md</div><div class="gr-desc">fox-ui + tokens</div></div>
+      <div class="gr-item"><div class="gr-name">react-patterns.md</div><div class="gr-desc">Code patterns</div></div>
+      <div class="gr-item"><div class="gr-name">git-workflow.md</div><div class="gr-desc">Branch rules</div></div>
+      <div class="gr-item"><div class="gr-name">mock-data.md</div><div class="gr-desc">Data gap tracking</div></div>
+    </div>
+  </div>
+
+  <div class="footer">Click any phase to expand details</div>
+</div>
+
+<script>
+var phases = [
+  {
+    id: "shape", label: "Shape + Data Contract", icon: "\uD83D\uDC8E",
+    color: { bg: "#F5F3FF", border: "#8B5CF6", text: "#5B21B6", glow: "rgba(139,92,246,0.15)" },
+    subtitle: "Define the problem space and shared data shape",
+    details: [
+      "Claude runs 6 roles: Strategy, Product, Design, Engineering, Ops, Retro",
+      "Shape Up methodology \u2014 appetite, not estimates",
+      "Data Contract: entities, fields, sources, assumptions, open questions",
+      "Both designer and dev build against the same shape from day one"
+    ],
+    tools: ["Claude Projects", "Notion", "Slack"]
+  },
+  {
+    id: "prototype", label: "Rapid Design", icon: "\u26A1",
+    color: { bg: "#EFF6FF", border: "#3B82F6", text: "#1D4ED8", glow: "rgba(59,130,246,0.15)" },
+    subtitle: "Designers and devs build in parallel",
+    details: [
+      "/start creates preview branch + dev server",
+      "fox-ui components + Tailwind \u2014 no custom UI",
+      "Mock data wrapped in <MockData> (bright blue in UI)",
+      "Figma MCP pulls exact design tokens",
+      "Devs can take straightforward stories (CRUD, tables, settings) end-to-end",
+      "Same guardrails for everyone \u2014 fox-ui, /start, /end"
+    ],
+    tools: ["Claude Code", "Windsurf", "Figma MCP", "fox-ui"],
+    freedom: true
+  },
+  {
+    id: "gaps", label: "Find Gaps", icon: "\uD83D\uDD0D",
+    color: { bg: "#FFF7ED", border: "#F97316", text: "#C2410C", glow: "rgba(249,115,22,0.15)" },
+    subtitle: "Surface what\u2019s missing",
+    details: [
+      "/end scans for MOCK_, FAKE_, <MockData> patterns",
+      "Data gaps added to PR body automatically",
+      "Jira data-gap tickets created for engineering",
+      "Engineering buddy gets notified"
+    ],
+    tools: ["/end skill", "Jira MCP", "GitHub"]
+  },
+  {
+    id: "northstar", label: "Northstar Gate", icon: "\u2B50",
+    color: { bg: "#ECFDF5", border: "#10B981", text: "#065F46", glow: "rgba(16,185,129,0.15)" },
+    subtitle: "Sort carefully \u2014 not everything ships at once",
+    details: [
+      "Multiple preview/ branches merged into northstar",
+      "Team reviews the full combined experience together",
+      "Ready features (gaps filled, checks pass) \u2192 promote to main",
+      "Features with open gaps stay held \u2014 has-mock-data label + Jira tickets track what\u2019s blocking",
+      "Features that conflict get pulled back for reshaping",
+      "This is where you slow down \u2014 everything before optimized for speed"
+    ],
+    tools: ["GitHub", "Preview URLs", "Jira"],
+    gate: true
+  },
+  {
+    id: "prod", label: "Main \u2192 Prod", icon: "\uD83D\uDE80",
+    color: { bg: "#F0FDF4", border: "#22C55E", text: "#166534", glow: "rgba(34,197,94,0.15)" },
+    subtitle: "Ship when ready",
+    details: [
+      "Only moves to main when gaps are filled",
+      "Auto-deploys to production",
+      "backoffice \u2192 backoffice.develop.candosa.com",
+      "client-app \u2192 app.develop.candosa.com"
+    ],
+    tools: ["CI/CD", "Vercel"]
+  }
+];
+
+var container = document.getElementById("phases");
+var activeId = "prototype";
+
+function renderPhases() {
+  container.innerHTML = "";
+  phases.forEach(function(phase, i) {
+    var isActive = activeId === phase.id;
+    var wrap = document.createElement("div");
+    wrap.className = "phase-wrap" + (isActive ? " active" : "");
+    wrap.style.marginBottom = "0";
+
+    // Zone wrappers
+    if (phase.freedom) {
+      wrap.innerHTML += '<div class="freedom-zone"><div class="zone-label zone-label-blue">PROTOTYPE FREEDOM ZONE</div></div>';
+    }
+    if (phase.gate) {
+      wrap.innerHTML += '<div class="gate-zone"><div class="zone-label zone-label-green">SLOW DOWN \u2014 SORT CAREFULLY</div></div>';
+    }
+
+    // Card
+    var card = document.createElement("div");
+    card.className = "phase-card";
+    card.style.background = phase.color.bg;
+    card.style.border = "2px solid " + (isActive ? phase.color.border : "transparent");
+    card.style.boxShadow = isActive
+      ? "0 4px 24px " + phase.color.glow + ", 0 0 0 1px " + phase.color.border
+      : "0 1px 3px rgba(0,0,0,0.06), 0 0 0 1px " + phase.color.border + "40";
+
+    var detailsHtml = phase.details.map(function(d) {
+      return '<div class="detail-item" style="color:' + phase.color.text + '"><span class="detail-dot" style="background:' + phase.color.border + '"></span><span>' + d + '</span></div>';
+    }).join("");
+
+    var toolsHtml = phase.tools.map(function(t) {
+      return '<span class="tool-tag" style="background:' + phase.color.border + '15;color:' + phase.color.text + ';border:1px solid ' + phase.color.border + '30;">' + t + '</span>';
+    }).join("");
+
+    card.innerHTML =
+      '<div class="phase-header">' +
+        '<div class="phase-left">' +
+          '<div class="phase-icon" style="background:' + phase.color.border + '18">' + phase.icon + '</div>' +
+          '<div>' +
+            '<div class="phase-num" style="color:' + phase.color.text + '">Phase ' + (i + 1) + '</div>' +
+            '<div class="phase-name" style="color:' + phase.color.text + '">' + phase.label + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="phase-arrow' + (isActive ? " open" : "") + '" style="background:' + phase.color.border + '20;color:' + phase.color.text + '">\u2192</div>' +
+      '</div>' +
+      '<div class="phase-sub" style="color:' + phase.color.text + 'CC">' + phase.subtitle + '</div>' +
+      '<div class="phase-details' + (isActive ? " open" : "") + '">' +
+        detailsHtml +
+        '<div class="tools">' + toolsHtml + '</div>' +
+      '</div>';
+
+    wrap.appendChild(card);
+    wrap.addEventListener("click", function() {
+      activeId = activeId === phase.id ? null : phase.id;
+      renderPhases();
+    });
+    container.appendChild(wrap);
+
+    // Arrow between phases
+    if (i < phases.length - 1) {
+      var arrowWrap = document.createElement("div");
+      arrowWrap.className = "arrow-wrap";
+
+      if (i === 2) {
+        // Reshape loop + down arrow
+        arrowWrap.innerHTML =
+          '<div class="reshape-pill">' +
+            '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8C2 4.68629 4.68629 2 8 2C10.2091 2 12.1165 3.26832 13.0955 5.12602" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"/><path d="M14 8C14 11.3137 11.3137 14 8 14C5.79086 14 3.88355 12.7317 2.90453 10.874" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"/><path d="M11 5.5L13.1 5.1L13.5 7.2" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+            '<span>Reshape if needed</span>' +
+          '</div>' +
+          '<div class="arrow-down"><svg width="24" height="32" viewBox="0 0 24 32" fill="none"><path d="M12 4V24" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/><path d="M6 20L12 28L18 20" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
+      } else if (i === 3) {
+        // Gate arrow
+        arrowWrap.innerHTML =
+          '<div class="gate-label">' +
+            '<svg width="24" height="32" viewBox="0 0 24 32" fill="none"><path d="M12 4V24" stroke="#10B981" stroke-width="2" stroke-linecap="round"/><path d="M6 20L12 28L18 20" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+            '<span>ready \u2192 ship</span>' +
+          '</div>';
+      } else {
+        // Regular or dashed arrow
+        var strokeColor = i === 1 ? "#94A3B8" : "#CBD5E1";
+        var dashArray = i === 1 ? 'stroke-dasharray="4 4"' : '';
+        arrowWrap.innerHTML =
+          '<div class="arrow-down"><svg width="24" height="32" viewBox="0 0 24 32" fill="none"><path d="M12 4V24" stroke="' + strokeColor + '" stroke-width="2" stroke-linecap="round" ' + dashArray + '/><path d="M6 20L12 28L18 20" stroke="' + strokeColor + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
+      }
+
+      container.appendChild(arrowWrap);
+    }
+  });
+}
+
+renderPhases();
+</script>
+</body>
+</html>
