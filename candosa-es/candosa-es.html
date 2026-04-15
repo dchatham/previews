@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Candosa — Tu gestoría, cómo debería ser</title>
+  <meta name="description" content="Una gestora que conoce tu negocio, te explica lo que necesitas saber y se ocupa de tus impuestos. Para que tú te dediques a lo que importa.">
+  <meta property="og:title" content="Candosa — Tu gestoría, cómo debería ser">
+  <meta property="og:description" content="Una gestora que conoce tu negocio, te explica lo que necesitas saber y se ocupa de tus impuestos. Para que tú te dediques a lo que importa.">
+  <meta name="twitter:title" content="Candosa — Tu gestoría, cómo debería ser">
+  <meta name="twitter:description" content="Una gestora que conoce tu negocio, te explica lo que necesitas saber y se ocupa de tus impuestos. Para que tú te dediques a lo que importa.">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="canonical" href="/es/">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: SuisseIntl; src: url('../../fonts/SuisseIntl-Book.otf') format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: SuisseIntl; src: url('../../fonts/SuisseIntl-Medium.otf') format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: SuisseIntl; src: url('../../fonts/SuisseIntl-SemiBold.otf') format("opentype"); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: SuisseIntl; src: url('../../fonts/SuisseIntl-Bold.otf') format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
+  </style>
+  <style>/* normalize.css v3.0.3 */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:bold}h1{font-size:2em;margin:.67em 0}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type='checkbox'],input[type='radio']{box-sizing:border-box;padding:0}input[type='search']{-webkit-appearance:none}input[type='search']::-webkit-search-cancel-button,input[type='search']::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}</style>
+  <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../../images/webclip.png" rel="apple-touch-icon">
+  <!--  TrustBox script  -->
+  <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" defer=""></script>
+  <!--  End TrustBox script  -->
+  <!-- Google Tag Manager -->
+  <!-- TODO: replace GTM-T7HCP7RM with real container ID -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T7HCP7RM');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /* =============================================
+       Candosa Landing — Design system aligned
+       Tokens from fox-ui theme + client-app glass
+       ============================================= */
+
+    :root {
+      /* Brand — slate blue (from fox-ui) */
+      --lp-brand-500: #3e526b;
+      --lp-brand-600: #334459;
+      --lp-brand-700: #293746;
+      --lp-brand-800: #213343;
+      --lp-brand-900: #1a2a36;
+      --lp-brand-950: #11212d;
+      /* Accent — coral orange (shared with landing + client-app) */
+      --lp-accent-50: #FEF0EC;
+      --lp-accent-500: #F03906;
+      --lp-accent-600: #c72707;
+      --lp-accent-700: #9e200e;
+      /* Neutral */
+      --lp-gray-50: #fafafa;
+      --lp-gray-100: #f5f5f5;
+      --lp-gray-200: #e9eaeb;
+      --lp-gray-300: #d5d7da;
+      --lp-gray-400: #a4a7ae;
+      --lp-gray-500: #717682;
+      --lp-gray-600: #535862;
+      --lp-gray-700: #414651;
+      --lp-gray-900: #181d27;
+      --lp-gray-950: #0a0d12;
+      /* Surface gradient — warm beige */
+      --lp-surface-from: #F5F0EB;
+      --lp-surface-via: #E5DCD3;
+      --lp-surface-to: #D4C9BD;
+      /* Glass */
+      --lp-glass-subtle: rgba(255,255,255,0.30);
+      --lp-glass: rgba(255,255,255,0.40);
+      --lp-glass-medium: rgba(255,255,255,0.50);
+      --lp-glass-hover: rgba(255,255,255,0.60);
+      --lp-glass-heavy: rgba(255,255,255,0.80);
+      --lp-glass-ring: rgba(255,255,255,0.30);
+      /* Shadows — skeumorphic (from fox-ui) */
+      --lp-shadow-xs: 0px 1px 2px rgba(10,13,18,0.05);
+      --lp-shadow-sm: 0px 1px 3px rgba(10,13,18,0.1), 0px 1px 2px -1px rgba(10,13,18,0.1);
+      --lp-shadow-md: 0px 4px 6px -1px rgba(10,13,18,0.1), 0px 2px 4px -2px rgba(10,13,18,0.06);
+      --lp-shadow-lg: 0px 12px 16px -4px rgba(10,13,18,0.08), 0px 4px 6px -2px rgba(10,13,18,0.03), 0px 2px 2px -1px rgba(10,13,18,0.04);
+      --lp-shadow-xl: 0px 20px 24px -4px rgba(10,13,18,0.08), 0px 8px 8px -4px rgba(10,13,18,0.03), 0px 3px 3px -1.5px rgba(10,13,18,0.04);
+      --lp-shadow-skeu: 0px 0px 0px 1px rgba(10,13,18,0.18) inset, 0px -2px 0px 0px rgba(10,13,18,0.05) inset;
+      /* Radii (from fox-ui) */
+      --lp-radius-md: 6px;
+      --lp-radius-lg: 8px;
+      --lp-radius-xl: 12px;
+      --lp-radius-2xl: 16px;
+      --lp-radius-3xl: 24px;
+      --lp-radius-full: 9999px;
+      /* Type */
+      --lp-font: SuisseIntl, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --lp-font-display: "DM Serif Text", Georgia, serif;
+    }
+
+    /* ── Base resets (formerly from webflow.css) ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { height: 100%; }
+    body { min-height: 100%; }
+    img { max-width: 100%; vertical-align: middle; display: inline-block; }
+    p { margin-top: 0; }
+
+    /* ── Skip link ── */
+    .lp-skip-link {
+      position: fixed;
+      left: 16px;
+      z-index: 1000;
+      top: -200px;
+      clip: rect(0,0,0,0);
+      overflow: hidden;
+      background: var(--lp-accent-500);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: var(--lp-radius-lg);
+      font-family: var(--lp-font);
+      font-size: 16px;
+      font-weight: 600;
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .lp-skip-link:focus { top: 16px; clip: auto; overflow: visible; }
+
+    /* ── Page ── */
+    .lp-page {
+      font-family: var(--lp-font);
+      color: var(--lp-gray-950);
+      background: var(--lp-surface-from);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    /* Ambient color blobs that drift behind the glass */
+    .lp-page::before,
+    .lp-page::after {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+      will-change: transform;
+    }
+    .lp-page::before {
+      display: none;
+    }
+    .lp-page::after {
+      display: none;
+    }
+    /* Third blob — warm accent in the middle */
+    .lp-blobs {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .lp-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      will-change: left, top;
+    }
+    /* All content above the blobs */
+    .lp-page > main,
+    .lp-page > footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Typography system:
+       - Instrument Serif for all headings (h1–h6) and blockquotes
+       - SuisseIntl/system for body, labels, buttons, UI text
+       This creates a warm editorial contrast — serif for personality,
+       sans-serif for clarity */
+    .lp-page h1, .lp-page h2, .lp-page h3,
+    .lp-page h4, .lp-page h5, .lp-page h6 {
+      font-family: var(--lp-font-display);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    .lp-page blockquote {
+      font-family: var(--lp-font-display);
+      font-style: italic;
+      letter-spacing: 0.01em;
+    }
+
+    .lp-section { padding: 100px 24px; }
+    .lp-section + .lp-section { padding-top: 60px; }
+    .lp-container { max-width: 1120px; margin: 0 auto; width: 100%; }
+
+    /* ── Glass card mixin ── */
+    .lp-glass {
+      background: var(--lp-glass);
+      backdrop-filter: blur(11px);
+      -webkit-backdrop-filter: blur(11px);
+      border: 1px solid var(--lp-glass-ring);
+      box-shadow: var(--lp-shadow-sm);
+    }
+    .lp-glass-heavy {
+      background: var(--lp-glass-heavy);
+      backdrop-filter: blur(11px);
+      -webkit-backdrop-filter: blur(11px);
+      border: 1px solid var(--lp-glass-ring);
+      box-shadow: var(--lp-shadow-sm);
+    }
+
+    /* ── Promo banner ── */
+    .lp-promo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      background: var(--lp-accent-500);
+      color: #fff;
+      font-family: var(--lp-font);
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      padding: 8px 16px;
+      line-height: 1.4;
+    }
+    @media screen and (max-width: 991px) {
+      .lp-promo { font-size: 12px; padding: 10px 20px; }
+    }
+
+    /* ── Navigation — floating glass pill ── */
+    .lp-nav-outer {
+      position: fixed;
+      top: 52px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      -webkit-backdrop-filter: blur(40px) saturate(1.3);
+      backdrop-filter: blur(40px) saturate(1.3);
+      border-radius: var(--lp-radius-full);
+      width: calc(100% - 32px);
+      max-width: 1168px;
+    }
+    .lp-nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(245, 240, 235, 0.5);
+      border-radius: var(--lp-radius-full);
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 8px 32px rgba(10,13,18,0.08), 0 1px 0 rgba(255,255,255,0.7) inset;
+    }
+    .lp-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .lp-nav-logo img { height: 24px; width: auto; }
+    .lp-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .lp-nav-link {
+      font-family: var(--lp-font);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--lp-gray-700);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: var(--lp-radius-full);
+      transition: color 0.15s, background 0.15s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .lp-nav-link:hover {
+      color: var(--lp-brand-950);
+      background: rgba(0,0,0,0.04);
+    }
+    @media screen and (max-width: 767px) {
+      .lp-nav-links { display: none; }
+    }
+    .lp-nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      background: var(--lp-accent-500);
+      color: #fff;
+      font-family: var(--lp-font);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--lp-radius-full);
+      min-height: 44px;
+      min-width: 44px;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(240,57,6,0.3);
+    }
+    .lp-nav-cta:hover { background: var(--lp-accent-600); }
+
+    /* Burger menu */
+    .lp-burger {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      min-height: 44px;
+      min-width: 44px;
+    }
+    .lp-burger svg { stroke: var(--lp-brand-950); }
+    .lp-mobile-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      background: rgba(245, 240, 235, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: var(--lp-radius-xl);
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 8px 32px rgba(10,13,18,0.1);
+      padding: 16px;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+    .lp-mobile-menu.is-open { display: flex; }
+    .lp-mobile-menu a {
+      font-family: var(--lp-font);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--lp-gray-600);
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: var(--lp-radius-full);
+      transition: background 0.15s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .lp-mobile-menu a:hover { background: rgba(0,0,0,0.04); }
+    .lp-mobile-menu a:focus-visible { outline: 0.125rem solid #4d65ff; outline-offset: 0.125rem; }
+
+    /* ── Hero ── */
+    .lp-hero {
+      padding: 120px 24px 120px;
+    }
+    .lp-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .lp-hero-text { max-width: 520px; }
+    .lp-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--lp-glass);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--lp-glass-ring);
+      color: var(--lp-brand-700);
+      font-family: var(--lp-font);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--lp-radius-full);
+      margin-bottom: 24px;
+    }
+    .lp-hero h1 {
+      font-family: var(--lp-font-display);
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -1.2px;
+      color: var(--lp-brand-950);
+      margin: 0 0 24px;
+    }
+    .lp-hero-sub {
+      font-family: var(--lp-font);
+      font-size: 18px;
+      color: var(--lp-gray-600);
+      margin: 0 0 32px;
+      line-height: 1.6;
+      max-width: 380px;
+    }
+    .lp-hero-reassurance {
+      margin-top: 16px;
+      font-family: var(--lp-font);
+      font-size: 13px;
+      color: var(--lp-gray-500);
+    }
+    .lp-hero-phone {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    .wa-phone-wrap {
+      perspective: 800px;
+    }
+    .lp-hero-fox {
+      position: absolute;
+      bottom: -30px;
+      left: -140px;
+      width: 245px;
+      height: auto;
+      z-index: 2;
+      filter: drop-shadow(0 8px 24px rgba(10,13,18,0.15));
+      pointer-events: none;
+    }
+
+    /* ── CTA button ── */
+    .lp-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 32px;
+      background: var(--lp-accent-500);
+      color: #fff;
+      font-family: var(--lp-font);
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: var(--lp-radius-lg);
+      min-height: 48px;
+      min-width: 48px;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--lp-shadow-skeu), var(--lp-shadow-xs);
+    }
+    .lp-cta-primary:hover { background: var(--lp-accent-600); }
+
+    /* Hero CTA pair */
+    .lp-hero-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 360px;
+    }
+    .lp-cta-whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--lp-accent-500);
+      color: #fff;
+      font-family: var(--lp-font);
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: var(--lp-radius-xl);
+      min-height: 52px;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--lp-shadow-skeu), var(--lp-shadow-sm);
+      width: 100%;
+    }
+    .lp-cta-whatsapp:hover { background: var(--lp-accent-600); }
+    .lp-cta-web {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 32px;
+      background: var(--lp-glass-heavy);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--lp-brand-950);
+      font-family: var(--lp-font);
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: var(--lp-radius-xl);
+      min-height: 52px;
+      transition: background 0.2s, box-shadow 0.2s;
+      border: 1px solid var(--lp-glass-ring);
+      cursor: pointer;
+      box-shadow: var(--lp-shadow-xs);
+      width: 100%;
+    }
+    .lp-cta-web:hover {
+      background: var(--lp-glass-hover);
+      box-shadow: var(--lp-shadow-sm);
+    }
+
+    /* ── Section labels ── */
+    .lp-section-label {
+      font-family: var(--lp-font);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--lp-gray-500);
+      margin: 0 0 12px;
+    }
+    .lp-section-title {
+      font-family: var(--lp-font-display);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--lp-brand-950);
+      margin: 0 0 56px;
+      line-height: 1.15;
+      letter-spacing: -0.72px;
+    }
+
+    /* ── Divider banner ── */
+    .lp-divider-section {
+      padding: 72px 24px;
+      background: rgba(237,230,223,0.65);
+      backdrop-filter: blur(40px) saturate(1.2);
+      -webkit-backdrop-filter: blur(40px) saturate(1.2);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.06), inset 0 -1px 2px rgba(0,0,0,0.06);
+    }
+    .lp-divider-line {
+      width: 40px;
+      height: 3px;
+      background: var(--lp-accent-500);
+      border-radius: 2px;
+      margin: 0 auto 24px;
+    }
+    .lp-divider-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      font-family: var(--lp-font);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--lp-accent-500);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .lp-divider-cta:hover { opacity: 0.8; }
+    .lp-divider-cta:focus-visible { outline: 0.125rem solid #4d65ff; outline-offset: 0.125rem; }
+    .lp-divider-text {
+      font-family: var(--lp-font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      color: var(--lp-brand-950);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+    }
+    .lp-divider-label {
+      font-family: var(--lp-font);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--lp-gray-500);
+      text-align: center;
+      margin: 0 0 16px;
+    }
+    .lp-divider-title {
+      font-family: var(--lp-font-display);
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 400;
+      color: var(--lp-brand-950);
+      text-align: center;
+      margin: 0 0 20px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+    .lp-divider-title em {
+      font-style: italic;
+      color: var(--lp-accent-500);
+    }
+    .lp-divider-sub {
+      font-family: var(--lp-font);
+      font-size: 17px;
+      color: var(--lp-gray-600);
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.55;
+    }
+
+    /* ── How it works — glass steps ── */
+    .lp-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .lp-step {
+      display: flex;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .lp-step:last-child { border-bottom: none; }
+    .lp-step-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      margin-top: 2px;
+      background: rgba(240,57,6,0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(240,57,6,0.15);
+      box-shadow: 0 2px 8px rgba(240,57,6,0.08), inset 0 1px 0 rgba(255,255,255,0.5);
+      border-radius: 50%;
+      color: var(--lp-accent-500);
+      font-family: var(--lp-font);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .lp-step-icon svg { display: none; }
+    .lp-step-icon img { display: none; }
+    .lp-step-number { display: none; }
+    .lp-step h3 {
+      font-family: var(--lp-font);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--lp-brand-950);
+      margin: 0 0 6px;
+    }
+    .lp-step p {
+      font-family: var(--lp-font);
+      font-size: 15px;
+      color: var(--lp-gray-600);
+      margin: 0;
+      line-height: 1.55;
+    }
+    .lp-step-highlight {
+      font-weight: 600;
+      color: var(--lp-brand-950);
+      display: block;
+      margin-top: 8px;
+    }
+    .lp-step-partner {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 8px 16px;
+      background: var(--lp-glass);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--lp-glass-ring);
+      border-radius: var(--lp-radius-full);
+      font-family: var(--lp-font);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--lp-gray-600);
+    }
+    .lp-step-partner svg {
+      flex-shrink: 0;
+    }
+    .lp-mobile-break { display: none; }
+    .lp-how-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .lp-how-logo-img {
+      height: 64px;
+      width: auto;
+    }
+    @media screen and (max-width: 767px) {
+      .lp-how-logo-img { height: 40px; }
+    }
+    .lp-how-subtitle {
+      font-family: var(--lp-font);
+      font-size: 17px;
+      color: var(--lp-gray-600);
+      margin: 0 auto 40px;
+      max-width: 780px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    /* Center the how-it-works heading */
+    #how-title {
+      text-align: center;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .lp-section:has(#how-title) .lp-section-label {
+      text-align: center;
+    }
+
+    /* ── Benefits — glass cards ── */
+    .lp-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .lp-benefit {
+      display: flex;
+      gap: 16px;
+      padding: 28px;
+      border-radius: var(--lp-radius-3xl);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .lp-benefit:hover {
+      background: var(--lp-glass-hover);
+      box-shadow: var(--lp-shadow-md);
+    }
+    .lp-benefit-icon {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background: var(--lp-accent-50);
+      border-radius: var(--lp-radius-2xl);
+    }
+    .lp-benefit-icon svg { width: 36px; height: 36px; }
+    .lp-benefit-icon img { width: 144px !important; height: 144px !important; }
+    .lp-benefit h3 {
+      font-family: var(--lp-font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--lp-brand-950);
+      margin: 0 0 6px;
+    }
+    .lp-benefit p {
+      font-family: var(--lp-font);
+      font-size: 15px;
+      color: var(--lp-gray-600);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* ── Comparison table ── */
+    .lp-compare {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .lp-compare thead th {
+      padding: 24px 20px 20px;
+      vertical-align: top;
+      text-align: center;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .lp-compare thead th:first-child {
+      text-align: left;
+    }
+    .lp-compare-name {
+      font-family: var(--lp-font);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--lp-brand-950);
+      margin: 0 0 6px;
+    }
+    .lp-compare-name.is-accent {
+      color: var(--lp-accent-500);
+    }
+    .lp-compare-desc {
+      font-family: var(--lp-font);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--lp-gray-500);
+      line-height: 1.4;
+      margin: 0;
+    }
+    .lp-compare td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-family: var(--lp-font);
+      font-size: 14px;
+      color: var(--lp-gray-600);
+      text-align: center;
+      vertical-align: middle;
+    }
+    .lp-compare td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--lp-brand-950);
+    }
+    .lp-compare tr:last-child td {
+      border-bottom: none;
+    }
+    /* Highlight Candosa column */
+    .lp-compare thead th:last-child,
+    .lp-compare td:last-child {
+      background: rgba(240,57,6,0.03);
+    }
+    .lp-compare thead th:last-child {
+      border-radius: 16px 16px 0 0;
+    }
+    .lp-compare tr:last-child td:last-child {
+      border-radius: 0 0 16px 16px;
+    }
+    .lp-compare .lp-c-yes {
+      color: #34c759;
+      font-size: 18px;
+    }
+    .lp-compare .lp-c-no {
+      color: var(--lp-gray-400);
+      font-size: 18px;
+    }
+    .lp-compare .lp-c-meh {
+      font-size: 12px;
+      color: var(--lp-gray-500);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .lp-compare .lp-c-meh span {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 767px) {
+      /* Comparison table — hide descriptions, fit all columns */
+      .lp-compare { font-size: 12px; width: 100%; table-layout: fixed; word-wrap: break-word; }
+      .lp-compare thead th { padding: 12px 6px 10px; }
+      .lp-compare td { padding: 10px 6px; }
+      .lp-compare-name { font-size: 13px; }
+      .lp-compare-desc { font-size: 10px; }
+      .lp-compare td:first-child { font-size: 12px; }
+      /* Banners */
+      .lp-divider-text { font-size: 20px; }
+      .lp-divider-title { font-size: 28px; }
+      .lp-divider-sub { font-size: 15px; }
+      .lp-divider-section { padding: 48px 16px; }
+      /* Carousel */
+      .lp-carousel-stack { max-width: 300px; }
+      /* How it works */
+      .lp-how-subtitle { font-size: 15px; }
+      .lp-how-footer { align-items: center; text-align: center; }
+      .lp-how-logo-img { height: 44px; }
+      .lp-step-partner { text-align: center; display: block; border-radius: var(--lp-radius-xl); padding: 10px 16px; }
+      .lp-step-partner svg { display: none; }
+      .lp-mobile-break { display: block; }
+      /* What is Candosa */
+      .lp-whatis-title { font-size: 28px; }
+      .lp-whatis p { font-size: 15px; }
+    }
+
+    /* ── What is Candosa ── */
+    .lp-whatis {
+      max-width: 640px;
+    }
+    .lp-whatis-title {
+      font-family: var(--lp-font-display);
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 400;
+      color: var(--lp-brand-950);
+      margin: 0 0 28px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+    .lp-whatis-title em {
+      font-style: italic;
+      color: var(--lp-accent-500);
+    }
+    .lp-whatis p {
+      font-family: var(--lp-font);
+      font-size: 16px;
+      color: var(--lp-gray-600);
+      line-height: 1.65;
+      margin: 0 0 20px;
+    }
+    .lp-whatis p strong {
+      color: var(--lp-brand-950);
+      font-weight: 600;
+    }
+    .lp-whatis p:last-of-type {
+      margin-bottom: 32px;
+    }
+    .lp-whatis-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--lp-accent-500);
+      color: #fff;
+      font-family: var(--lp-font);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--lp-radius-full);
+      min-height: 44px;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(240,57,6,0.3);
+    }
+    .lp-whatis-cta:hover { background: var(--lp-accent-600); }
+    .lp-whatis-cta:focus-visible { outline: 0.125rem solid #4d65ff; outline-offset: 0.125rem; }
+
+    /* What is Candosa — two-column grid */
+    .lp-whatis-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media screen and (max-width: 767px) {
+      .lp-whatis-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* Carousel */
+    .lp-whatis-carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .lp-carousel-stack {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 4/5;
+      border-radius: var(--lp-radius-3xl);
+      overflow: hidden;
+    }
+    .lp-carousel-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--lp-radius-3xl);
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+    .lp-carousel-img.is-active {
+      opacity: 1;
+    }
+    .lp-carousel-dots {
+      display: flex;
+      gap: 8px;
+    }
+    .lp-carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0,0,0,0.12);
+      cursor: pointer;
+      padding: 0;
+      min-height: 44px;
+      min-width: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+    .lp-carousel-dot::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.15);
+      transition: background 0.2s;
+    }
+    .lp-carousel-dot.is-active::after {
+      background: var(--lp-accent-500);
+    }
+    .lp-carousel-dot:focus-visible { outline: 0.125rem solid #4d65ff; outline-offset: 0.125rem; }
+
+    /* ── Testimonials — glass cards ── */
+    .lp-testimonials {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: start;
+      transition: grid-template-columns 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .lp-testimonials.flipped {
+      grid-template-columns: 0.8fr 1.2fr;
+    }
+    .lp-testimonial {
+      padding: 36px;
+      border-radius: var(--lp-radius-3xl);
+      cursor: pointer;
+      transition: padding 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .lp-testimonial.featured {
+      padding: 44px;
+    }
+    .lp-testimonial.featured blockquote {
+      font-size: 24px;
+      line-height: 1.45;
+    }
+    .lp-testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+    .lp-testimonial-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--lp-accent-500);
+    }
+    .lp-testimonial blockquote {
+      font-size: 17px;
+      color: var(--lp-brand-950);
+      margin: 0 0 24px;
+      line-height: 1.55;
+      transition: font-size 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                  line-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .lp-testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .lp-testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--lp-brand-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: var(--lp-font);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .lp-testimonial-name {
+      font-family: var(--lp-font);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--lp-brand-950);
+      margin: 0;
+    }
+    .lp-testimonial-role {
+      font-family: var(--lp-font);
+      font-size: 13px;
+      color: var(--lp-gray-500);
+      margin: 0;
+    }
+
+    /* ── Final CTA — slate blue panel ── */
+    .lp-final-cta {
+      text-align: center;
+      background: var(--lp-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--lp-glass-ring);
+      border-radius: var(--lp-radius-3xl);
+      margin: 0 24px;
+      max-width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: var(--lp-shadow-lg);
+    }
+    .lp-final-cta h2 {
+      font-family: var(--lp-font-display);
+      font-size: 44px;
+      font-weight: 400;
+      color: var(--lp-brand-950);
+      margin: 0 auto 16px;
+      max-width: 600px;
+      line-height: 1.12;
+      letter-spacing: -0.72px;
+    }
+    .lp-final-cta-sub {
+      font-family: var(--lp-font);
+      font-size: 16px;
+      color: var(--lp-gray-600);
+      margin: 0 auto 36px;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+    .lp-final-cta .lp-cta-primary:focus-visible {
+      outline-color: var(--lp-accent-500);
+    }
+    .lp-final-cta-reassurance {
+      margin-top: 20px;
+      font-family: var(--lp-font);
+      font-size: 13px;
+      color: var(--lp-gray-500);
+    }
+    .lp-final-cta-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-family: var(--lp-font);
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+    .lp-final-cta-list li::before {
+      content: "—";
+      margin-right: 8px;
+      opacity: 0.5;
+    }
+
+    /* ── Footer ── */
+    .lp-footer {
+      padding: 64px 24px 40px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .lp-footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .lp-footer-brand p {
+      font-family: var(--lp-font);
+      font-size: 14px;
+      color: var(--lp-gray-500);
+      line-height: 1.6;
+      margin: 16px 0 0;
+      max-width: 280px;
+    }
+    .lp-footer-brand .lp-nav-logo img { height: 22px; }
+    .lp-footer-col h4 {
+      font-family: var(--lp-font);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--lp-gray-400);
+      margin: 0 0 16px;
+    }
+    .lp-footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .lp-footer-col a {
+      font-family: var(--lp-font);
+      font-size: 14px;
+      color: var(--lp-gray-700);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .lp-footer-col a:hover { color: var(--lp-accent-500); }
+    .lp-footer-bottom {
+      border-top: 1px solid var(--lp-glass-ring);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .lp-footer-bottom p {
+      font-family: var(--lp-font);
+      font-size: 13px;
+      color: var(--lp-gray-400);
+      margin: 0;
+    }
+    .lp-footer-bottom a {
+      color: var(--lp-gray-500);
+      text-decoration: none;
+    }
+    .lp-footer-bottom a:hover { color: var(--lp-accent-500); }
+    @media screen and (max-width: 767px) {
+      .lp-footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .lp-footer-brand { grid-column: 1 / -1; }
+      .lp-footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 479px) {
+      .lp-footer-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ── WhatsApp phone mockup ── */
+    .wa-phone {
+      position: relative;
+      width: 300px;
+      height: 600px;
+      border-radius: 40px;
+      border: 7px solid #1a1a1a;
+      background: #1a1a1a;
+      overflow: hidden;
+      box-shadow: var(--lp-shadow-xl), 12px 20px 40px -10px rgba(10,13,18,0.22);
+      flex-shrink: 0;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease;
+      transform-style: preserve-3d;
+      will-change: transform;
+      /* Default: slightly tilted */
+      transform: rotateY(-6deg) rotateX(2deg);
+    }
+    .wa-phone-wrap:hover .wa-phone {
+      /* On hover: straighten out */
+      transform: rotateY(0deg) rotateX(0deg) translateY(-4px);
+      box-shadow: var(--lp-shadow-xl), 0 24px 48px -12px rgba(10,13,18,0.16);
+    }
+    .wa-dynamic-island {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 24px;
+      background: #1a1a1a;
+      border-radius: 0 0 16px 16px;
+      z-index: 30;
+    }
+    .wa-screen {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+    }
+    .wa-chat-bg {
+      background-color: #EFE7DC;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' opacity='0.045'%3E%3Cg fill='none' stroke='%23603010' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Cpath d='M33 37l5 5 9-9'/%3E%3Cpath d='M120 20 q8-12 16 0 q8 12 0 22 L128 54z'/%3E%3Crect x='180' y='25' width='50' height='38' rx='8'/%3E%3Cpath d='M193 63l-12 12'/%3E%3Ccircle cx='205' cy='44' r='4'/%3E%3Ccircle cx='220' cy='44' r='4'/%3E%3Cpath d='M30 120 q0-16 18-16h50q18 0 18 16v20q0 16-18 16H58l-12 12v-12h-2q-14 0-14-16z'/%3E%3Ccircle cx='210' cy='130' r='22'/%3E%3Cpath d='M200 125 q10-8 20 0'/%3E%3Ccircle cx='204' cy='120' r='3'/%3E%3Ccircle cx='216' cy='120' r='3'/%3E%3Cpath d='M60 210 l8-14 8 14z M72 196l8 14 8-14'/%3E%3Ccircle cx='160' cy='210' r='18'/%3E%3Cpath d='M151 210 h18 M160 201 v18'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .wa-statusbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px 4px;
+      background: #fff;
+      flex-shrink: 0;
+    }
+    .wa-statusbar-time { font-size: 11px; font-weight: 600; color: #000; font-family: var(--lp-font); }
+    .wa-navbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px 10px;
+      background: #fff;
+      border-bottom: 0.5px solid #C8C7CC;
+      flex-shrink: 0;
+    }
+    .wa-navbar-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #1C1C1E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .wa-navbar-name { font-size: 13px; font-weight: 600; color: #000; font-family: var(--lp-font); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .wa-navbar-sub { font-size: 10px; color: #8E8E93; font-family: var(--lp-font); }
+    .wa-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px 10px 4px;
+      scroll-behavior: smooth;
+    }
+    .wa-messages-inner { display: flex; flex-direction: column; gap: 5px; }
+    .wa-today {
+      text-align: center;
+      padding: 10px 0;
+    }
+    .wa-today span {
+      background: #fff;
+      color: #555;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 14px;
+      border-radius: 999px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+      font-family: var(--lp-font);
+    }
+    .wa-row { display: flex; }
+    .wa-row-left { justify-content: flex-start; }
+    .wa-row-right { justify-content: flex-end; }
+    .wa-bubble-in {
+      background: #fff;
+      border-radius: 16px 16px 16px 4px;
+      max-width: 80%;
+      padding: 6px 10px 4px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #111;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+      font-family: var(--lp-font);
+      text-align: left;
+    }
+    .wa-bubble-out {
+      background: #DCF8C6;
+      border-radius: 16px 16px 4px 16px;
+      max-width: 80%;
+      padding: 6px 10px 4px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #111;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+      font-family: var(--lp-font);
+      text-align: left;
+    }
+    .wa-ts {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 3px;
+      margin-top: 2px;
+    }
+    .wa-ts-text { font-size: 10px; color: #8696A0; }
+    .wa-typing {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: #fff;
+      border-radius: 16px 16px 16px 4px;
+      padding: 10px 14px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    }
+    .wa-typing-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #8696A0;
+    }
+    .wa-inputbar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px;
+      background: #F0F2F0;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .wa-input-pill {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border-radius: 999px;
+      padding: 0 10px;
+      height: 28px;
+      min-width: 0;
+    }
+    .wa-input-placeholder { font-size: 12px; color: #8696A0; font-family: var(--lp-font); }
+    .wa-mic-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: none;
+    }
+
+    /* WA animations */
+    @keyframes wa-bubble-in {
+      from { opacity: 0; transform: scale(0.92) translateY(5px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes wa-dot-bounce {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30%            { transform: translateY(-5px); opacity: 1; }
+    }
+    .wa-animate { animation: wa-bubble-in 0.18s ease-out both; }
+    .wa-dot-1 { animation: wa-dot-bounce 1.1s ease-in-out 0s infinite; }
+    .wa-dot-2 { animation: wa-dot-bounce 1.1s ease-in-out 0.18s infinite; }
+    .wa-dot-3 { animation: wa-dot-bounce 1.1s ease-in-out 0.36s infinite; }
+    .wa-msg { display: none; }
+    .wa-msg.visible { display: flex; }
+    .wa-cta-card { display: none; }
+    .wa-cta-card.visible { display: flex; }
+    .wa-cta-btn {
+      display: block;
+      width: 100%;
+      background: #25D366;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px 0;
+      font-weight: 700;
+      font-size: 13px;
+      font-family: var(--lp-font);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .wa-cta-btn:hover { background: #1fbd5a; }
+    .wa-cta-btn:focus-visible { outline: 2px solid #25D366; outline-offset: 2px; }
+    .wa-real-input {
+      flex: 1;
+      background: #fff;
+      border-radius: 999px;
+      padding: 0 10px;
+      height: 28px;
+      min-width: 0;
+      font-size: 12px;
+      font-family: var(--lp-font);
+      border: none;
+      outline: none;
+      color: #111;
+    }
+    .wa-real-input::placeholder { color: #8696A0; }
+    .wa-send-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .wa-send-btn:hover { background: #1fbd5a; }
+
+    /* ── Focus styles ── */
+    .lp-page a:focus-visible,
+    .lp-page button:focus-visible {
+      outline: 2px solid var(--lp-accent-500);
+      outline-offset: 2px;
+    }
+
+    /* ── Responsive ── */
+
+    /* Tablet */
+    @media screen and (max-width: 991px) {
+      .lp-hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .lp-hero-text { max-width: 100%; margin: 0 auto; }
+      .lp-hero-sub { max-width: 420px; margin-left: auto; margin-right: auto; }
+      .lp-hero-ctas { margin: 0 auto; }
+      .lp-hero h1 { font-size: 48px; }
+      .lp-hero-phone { margin-top: 24px; width: fit-content; margin-left: auto; margin-right: auto; }
+      .lp-hero-fox { width: 140px; left: -80px; bottom: -15px; }
+      .lp-section-title { font-size: 30px; }
+      .lp-benefits-grid { grid-template-columns: 1fr; }
+      .lp-testimonials { grid-template-columns: 1fr; }
+      .lp-testimonial.featured blockquote { font-size: 22px; }
+      .lp-final-cta h2 { font-size: 34px; }
+      .lp-footer-inner { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 32px; }
+      /* Nav — show burger on tablets and phones */
+      .lp-nav-center { display: none !important; }
+      .lp-burger { display: flex; }
+      .lp-nav-cta { display: none; }
+      /* Two-column grids to single column */
+      .lp-whatis-grid { grid-template-columns: 1fr; gap: 40px; }
+      .lp-compare { font-size: 12px; table-layout: fixed; word-wrap: break-word; }
+    }
+
+    /* Small tablet / large phone */
+    @media screen and (max-width: 767px) {
+      .lp-section { padding: 56px 16px; }
+      .lp-hero { padding: 120px 16px 48px; }
+      .lp-hero h1 { font-size: 44px; letter-spacing: -0.5px; }
+      .lp-hero-sub { font-size: 16px; max-width: 75%; }
+      .lp-hero-ctas { max-width: 100%; }
+      .lp-cta-whatsapp, .lp-cta-web { width: 100%; }
+      .lp-section-title { font-size: 26px; margin-bottom: 36px; }
+      .lp-steps { max-width: 100%; }
+      .lp-benefit { padding: 20px; }
+      .lp-testimonial { padding: 20px; }
+      .lp-testimonial.featured { padding: 24px; }
+      .lp-testimonial.featured blockquote { font-size: 20px; }
+      /* Final CTA — inset from edges */
+      .lp-final-cta { border-radius: var(--lp-radius-2xl); margin-left: 16px; margin-right: 16px; }
+      .lp-final-cta h2 { font-size: 26px; }
+      /* Phone + fox */
+      .wa-phone { width: 200px; height: 400px; border-radius: 28px; border-width: 5px; }
+      .wa-dynamic-island { width: 66px; height: 18px; border-radius: 0 0 11px 11px; }
+      .lp-hero-phone { width: fit-content; margin-left: auto; margin-right: auto; }
+      .lp-hero-fox { width: 112px; left: -70px; bottom: -10px; }
+      /* Nav tighter */
+      .lp-nav { padding: 10px 16px; }
+      .lp-nav-cta { padding: 8px 18px; font-size: 13px; }
+      /* Footer */
+      .lp-footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .lp-footer-brand { grid-column: 1 / -1; }
+      .lp-footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    /* Phone */
+    @media screen and (max-width: 479px) {
+      .lp-hero h1 { font-size: 48px; letter-spacing: -0.8px; }
+      .lp-benefit { flex-direction: column; }
+      .lp-cta-primary { width: 100%; }
+      .wa-phone { width: 200px; height: 400px; border-radius: 26px; border-width: 5px; }
+      .wa-dynamic-island { width: 60px; height: 16px; border-radius: 0 0 10px 10px; }
+      /* Fox stays absolute to .lp-hero-phone but phone is centered within it */
+      .lp-hero-phone { width: fit-content; margin-left: auto; margin-right: auto; }
+      .lp-hero-fox { width: 98px; left: -60px; bottom: -10px; }
+      .lp-final-cta { margin-left: 8px; margin-right: 8px; }
+      .lp-footer-inner { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================
+       Motion system
+       ============================================= */
+
+    /* ── Hero entrance cascade ── */
+    .lp-hero-badge,
+    .lp-hero h1,
+    .lp-hero-sub,
+    .lp-hero-ctas,
+    .lp-hero-reassurance,
+    .lp-hero-phone {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: lp-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .lp-hero-badge       { animation-delay: 0.1s; }
+    .lp-hero h1           { animation-delay: 0.2s; }
+    .lp-hero-sub          { animation-delay: 0.32s; }
+    .lp-hero-ctas         { animation-delay: 0.44s; }
+    .lp-hero-reassurance  { animation-delay: 0.52s; }
+    .lp-hero-phone        { animation-delay: 0.35s; transform: translateY(40px); }
+
+    @keyframes lp-rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Phone idle float ── */
+    @keyframes lp-float {
+      0%, 100% { transform: rotateY(-6deg) rotateX(2deg) translateY(0); }
+      50%      { transform: rotateY(-6deg) rotateX(2deg) translateY(-10px); }
+    }
+    .wa-phone {
+      animation: lp-float 5s ease-in-out infinite;
+      animation-delay: 2s;
+    }
+    .wa-phone-wrap:hover .wa-phone {
+      animation: none;
+    }
+
+    /* ── Scroll reveal — only used for triggering star shimmer ── */
+    .lp-reveal { /* no visual transition — class used for observer triggers */ }
+
+    /* ── Card micro-interactions ── */
+    .lp-benefit,
+    .lp-testimonial {
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                  background 0.25s ease,
+                  box-shadow 0.35s ease;
+    }
+    .lp-benefit:hover {
+      transform: translateY(-4px);
+    }
+    .lp-testimonial:hover {
+      transform: translateY(-3px) rotate(-0.3deg);
+      box-shadow: var(--lp-shadow-md);
+    }
+
+    /* ── CTA press effect ── */
+    .lp-cta-whatsapp:active,
+    .lp-cta-web:active,
+    .lp-cta-primary:active,
+    .lp-nav-cta:active {
+      transform: scale(0.97);
+      transition: transform 0.1s ease;
+    }
+
+
+
+    /* ── Testimonial star shimmer ── */
+    @keyframes lp-shimmer {
+      0%   { opacity: 0.5; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .lp-testimonial.in-view .lp-testimonial-stars svg {
+      opacity: 0;
+      animation: lp-shimmer 0.3s ease forwards;
+    }
+    .lp-testimonial.in-view .lp-testimonial-stars svg:nth-child(1) { animation-delay: 0.1s; }
+    .lp-testimonial.in-view .lp-testimonial-stars svg:nth-child(2) { animation-delay: 0.2s; }
+    .lp-testimonial.in-view .lp-testimonial-stars svg:nth-child(3) { animation-delay: 0.3s; }
+    .lp-testimonial.in-view .lp-testimonial-stars svg:nth-child(4) { animation-delay: 0.4s; }
+    .lp-testimonial.in-view .lp-testimonial-stars svg:nth-child(5) { animation-delay: 0.5s; }
+
+
+    /* ── Bar chart animation ── */
+    .lp-primary-svg .bar-group {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .lp-primary-svg.in-view .bar-group {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .lp-primary-svg.in-view .bar-group:nth-child(1) { transition-delay: 0.1s; }
+    .lp-primary-svg.in-view .bar-group:nth-child(2) { transition-delay: 0.25s; }
+    .lp-primary-svg.in-view .bar-group:nth-child(3) { transition-delay: 0.4s; }
+    .lp-primary-svg.in-view .bar-group:nth-child(4) { transition-delay: 0.55s; }
+
+    /* ── Section illustrations ── */
+    .lp-section-illustration {
+      display: block;
+      max-width: 280px;
+      height: auto;
+      margin: 0 auto;
+      pointer-events: none;
+    }
+    .lp-how-illustration {
+      margin-top: 48px;
+    }
+    .lp-compare-illustration {
+      margin-top: 48px;
+    }
+    .lp-cta-illustration {
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) {
+      .lp-section-illustration { max-width: 320px; }
+    }
+
+    /* ── Respect reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .lp-hero-badge, .lp-hero h1, .lp-hero-sub,
+      .lp-hero-ctas, .lp-hero-reassurance, .lp-hero-phone {
+        opacity: 1; transform: none;
+      }
+    }
+
+    /* ── Cookie consent banner override ── */
+    #cookiescript_injected,
+    #cookiescript_injected > div,
+    #cookiescript_injected [id*="cookiescript"] {
+      background: rgba(245,240,235,0.95) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: none !important;
+    }
+    #cookiescript_injected {
+      border-radius: 16px 16px 0 0 !important;
+      box-shadow: 0 -4px 32px rgba(10,13,18,0.1) !important;
+      font-family: var(--lp-font) !important;
+    }
+    #cookiescript_injected * {
+      font-family: var(--lp-font) !important;
+    }
+    #cookiescript_injected h2,
+    #cookiescript_injected h3,
+    #cookiescript_injected [class*="title"],
+    #cookiescript_injected strong,
+    #cookiescript_injected b {
+      font-family: var(--lp-font-display) !important;
+      color: var(--lp-brand-950) !important;
+    }
+    #cookiescript_injected [id*="accept"],
+    #cookiescript_injected [class*="accept"] {
+      background: var(--lp-accent-500) !important;
+      border: none !important;
+      border-radius: 9999px !important;
+      font-weight: 600 !important;
+      color: #fff !important;
+      padding: 12px 28px !important;
+    }
+    #cookiescript_injected [id*="accept"]:hover,
+    #cookiescript_injected [class*="accept"]:hover {
+      background: var(--lp-accent-600) !important;
+    }
+    #cookiescript_injected [id*="reject"],
+    #cookiescript_injected [class*="reject"],
+    #cookiescript_injected [id*="decline"],
+    #cookiescript_injected [class*="decline"] {
+      background: transparent !important;
+      border: 1.5px solid var(--lp-brand-950) !important;
+      border-radius: 9999px !important;
+      color: var(--lp-brand-950) !important;
+      font-weight: 600 !important;
+      padding: 12px 28px !important;
+    }
+    #cookiescript_injected [id*="reject"]:hover,
+    #cookiescript_injected [class*="reject"]:hover,
+    #cookiescript_injected [id*="decline"]:hover,
+    #cookiescript_injected [class*="decline"]:hover {
+      background: var(--lp-brand-950) !important;
+      color: #fff !important;
+    }
+    /* Links */
+    #cookiescript_injected a {
+      color: var(--lp-accent-500) !important;
+    }
+    /* Checkboxes */
+    #cookiescript_injected input[type="checkbox"]:checked + label::before,
+    #cookiescript_injected [class*="active"] {
+      background-color: var(--lp-accent-500) !important;
+      border-color: var(--lp-accent-500) !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- TODO: replace GTM-T7HCP7RM with real container ID -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7HCP7RM"
+  height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="lp-promo" role="banner">
+    🦊 Porque te queremos (con nosotros 😉) — todos los nuevos clientes tienen un 25% de descuento ya aplicado. ¡Te ahorramos 108€ en tus primeros 3 meses! 🎉
+  </div>
+
+  <div class="lp-page">
+    <div class="lp-blobs" aria-hidden="true">
+      <div class="lp-blob" id="blob1" style="width:600px;height:600px;left:60vw;top:5vh;background:radial-gradient(circle,rgba(240,57,6,0.08),rgba(255,120,55,0.1) 40%,transparent 70%)"></div>
+      <div class="lp-blob" id="blob2" style="width:500px;height:500px;left:5vw;top:60vh;background:radial-gradient(circle,rgba(62,82,107,0.08),rgba(109,130,154,0.1) 40%,transparent 70%)"></div>
+      <div class="lp-blob" id="blob3" style="width:450px;height:450px;left:35vw;top:35vh;background:radial-gradient(circle,rgba(212,201,189,0.2),rgba(229,220,211,0.15) 40%,transparent 70%)"></div>
+    </div>
+    <a href="#main-content" class="lp-skip-link">Ir al contenido principal</a>
+
+    <!-- Navigation — floating glass pill -->
+    <header>
+    <div class="lp-nav-outer">
+      <nav class="lp-nav" aria-label="Navegación principal">
+        <a href="/es/" class="lp-nav-logo" aria-label="Candosa — Ir a la página principal">
+          <img src="images/Exclude.svg" alt="" aria-hidden="true" width="28" height="28">
+          <img src="images/Vector.svg" alt="Candosa" width="128" height="24">
+        </a>
+        <div class="lp-nav-center" style="display:flex;align-items:center;gap:4px;position:absolute;left:50%;transform:translateX(-50%);">
+          <a href="/es/about/" class="lp-nav-link" style="font-size:15px;font-weight:400;color:var(--lp-gray-600);">Sobre nosotros</a>
+          <a href="/es/blog/" class="lp-nav-link" style="font-size:15px;font-weight:400;color:var(--lp-gray-600);">Blog</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <a href="https://app.candosa.com" class="lp-nav-cta">Comenzar</a>
+          <button class="lp-burger" aria-label="Abrir menú" aria-expanded="false" onclick="document.querySelector('.lp-mobile-menu').classList.toggle('is-open');this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="lp-mobile-menu" role="menu">
+          <a href="/es/about/" role="menuitem">Sobre nosotros</a>
+          <a href="/es/blog/" role="menuitem">Blog</a>
+          <a href="https://app.candosa.com" role="menuitem">Comenzar</a>
+        </div>
+      </nav>
+    </div>
+    </header>
+
+    <main id="main-content">
+
+      <!-- ── Hero with WhatsApp phone ── -->
+      <section class="lp-hero lp-section" aria-labelledby="hero-title">
+        <div class="lp-container">
+          <div class="lp-hero-inner">
+            <div class="lp-hero-text">
+              <span class="lp-hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                La gestoría que cabe en tu móvil
+              </span>
+              <h1 id="hero-title">Gestiona tu negocio<br>sin salir del chat.</h1>
+              <p class="lp-hero-sub">Facturas, impuestos y trámites.<br>Todo por WhatsApp.</p>
+              <div class="lp-hero-ctas">
+                <a href="https://wa.me/34911672681?text=Hola" target="_blank" rel="noopener" class="lp-cta-whatsapp">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Empieza por WhatsApp
+                </a>
+                <a href="https://app.candosa.com" class="lp-cta-web">
+                  O regístrate desde la web
+                </a>
+              </div>
+              <p class="lp-hero-reassurance">Sin compromiso &middot; Cancela cuando quieras &middot; Respondemos en &lt;2h</p>
+            </div>
+            <div class="lp-hero-phone">
+              <img src="images/hero.svg" alt="" aria-hidden="true" class="lp-hero-fox" width="715" height="934">
+              <!-- WhatsApp phone mockup -->
+              <div class="wa-phone-wrap">
+              <div class="wa-phone" role="img" aria-label="Simulación de conversación de WhatsApp con Candosa mostrando cómo se gestiona tu empresa por chat">
+                <div class="wa-dynamic-island"></div>
+                <div class="wa-screen wa-chat-bg">
+                  <!-- Status bar -->
+                  <div class="wa-statusbar">
+                    <span class="wa-statusbar-time">9:41</span>
+                    <div style="display:flex;align-items:center;gap:5px">
+                      <svg width="14" height="10" viewBox="0 0 14 10" fill="#000" aria-hidden="true"><rect x="0" y="6" width="2.5" height="4" rx="0.5"/><rect x="3.5" y="4" width="2.5" height="6" rx="0.5"/><rect x="7" y="2" width="2.5" height="8" rx="0.5"/><rect x="10.5" y="0" width="2.5" height="10" rx="0.5" opacity="0.4"/></svg>
+                      <svg width="13" height="10" viewBox="0 0 13 10" fill="none" stroke="#000" stroke-width="1.3" aria-hidden="true"><path d="M6.5 8.5a.5.5 0 100-1 .5.5 0 000 1z" fill="#000" stroke="none"/><path d="M3.5 6.2a4 4 0 015 0"/><path d="M1 3.8a7.5 7.5 0 0111 0"/></svg>
+                      <div style="display:flex;align-items:center"><div style="width:18px;height:9px;border:1px solid rgba(0,0,0,0.35);border-radius:2px;overflow:hidden"><div style="width:92%;height:100%;background:#000"></div></div></div>
+                    </div>
+                  </div>
+                  <!-- WA Navbar -->
+                  <div class="wa-navbar">
+                    <svg width="10" height="16" viewBox="0 0 11 18" fill="#007AFF" aria-hidden="true"><path d="M9.5 1L1.5 9l8 8" stroke="#007AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div class="wa-navbar-avatar" style="background:#FEF0EC;overflow:hidden">
+                      <img src="../../images/jose-gestor.webp" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+                    </div>
+                    <div style="flex:1;min-width:0">
+                      <div class="wa-navbar-name">José · Candosa</div>
+                      <div class="wa-navbar-sub">en línea</div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:14px;flex-shrink:0">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#007AFF" aria-hidden="true"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#007AFF" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
+                  </div>
+                  <!-- Messages -->
+                  <div class="wa-messages" id="wa-chat">
+                    <div class="wa-today"><span>Hoy</span></div>
+                    <div class="wa-messages-inner" id="wa-msgs">
+                      <!-- 0: Candosa intro -->
+                      <div class="wa-msg wa-row wa-row-left" data-idx="0">
+                        <div class="wa-bubble-in wa-animate">
+                          ¡Hola! 👋 Soy José, tu gestor en Candosa. Encantado de conocerte. ¿Cuál es el nombre de tu empresa?
+                          <div class="wa-ts"><span class="wa-ts-text">10:40</span></div>
+                        </div>
+                      </div>
+                      <!-- 1: User -->
+                      <div class="wa-msg wa-row wa-row-right" data-idx="1">
+                        <div class="wa-bubble-out wa-animate">
+                          TechStart SL
+                          <div class="wa-ts">
+                            <span class="wa-ts-text">10:41</span>
+                            <svg width="15" height="10" viewBox="0 0 16 11" fill="none" aria-hidden="true"><path d="M1 5.5l3.5 3.5L11 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5.5l3.5 3.5L15 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 2: Candosa -->
+                      <div class="wa-msg wa-row wa-row-left" data-idx="2">
+                        <div class="wa-bubble-in wa-animate">
+                          ¡Perfecto! ¿Y tu número de CIF?
+                          <div class="wa-ts"><span class="wa-ts-text">10:42</span></div>
+                        </div>
+                      </div>
+                      <!-- 3: User -->
+                      <div class="wa-msg wa-row wa-row-right" data-idx="3">
+                        <div class="wa-bubble-out wa-animate">
+                          B-12345678
+                          <div class="wa-ts">
+                            <span class="wa-ts-text">10:43</span>
+                            <svg width="15" height="10" viewBox="0 0 16 11" fill="none" aria-hidden="true"><path d="M1 5.5l3.5 3.5L11 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5.5l3.5 3.5L15 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 4: Candosa -->
+                      <div class="wa-msg wa-row wa-row-left" data-idx="4">
+                        <div class="wa-bubble-in wa-animate">
+                          &#x2705; ¡Cuenta creada! Ahora añadamos tu primera factura &mdash; ¿quién es el cliente?
+                          <div class="wa-ts"><span class="wa-ts-text">10:43</span></div>
+                        </div>
+                      </div>
+                      <!-- 5: User -->
+                      <div class="wa-msg wa-row wa-row-right" data-idx="5">
+                        <div class="wa-bubble-out wa-animate">
+                          Amazon EU SARL
+                          <div class="wa-ts">
+                            <span class="wa-ts-text">10:44</span>
+                            <svg width="15" height="10" viewBox="0 0 16 11" fill="none" aria-hidden="true"><path d="M1 5.5l3.5 3.5L11 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5.5l3.5 3.5L15 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 6: Candosa -->
+                      <div class="wa-msg wa-row wa-row-left" data-idx="6">
+                        <div class="wa-bubble-in wa-animate">
+                          ¡Anotado! ¿Importe total (IVA incluido)?
+                          <div class="wa-ts"><span class="wa-ts-text">10:44</span></div>
+                        </div>
+                      </div>
+                      <!-- 7: User -->
+                      <div class="wa-msg wa-row wa-row-right" data-idx="7">
+                        <div class="wa-bubble-out wa-animate">
+                          2.420 &euro;
+                          <div class="wa-ts">
+                            <span class="wa-ts-text">10:45</span>
+                            <svg width="15" height="10" viewBox="0 0 16 11" fill="none" aria-hidden="true"><path d="M1 5.5l3.5 3.5L11 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5.5l3.5 3.5L15 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 8: Candosa invoice -->
+                      <div class="wa-msg wa-row wa-row-left" data-idx="8">
+                        <div class="wa-bubble-in wa-animate">
+                          <div>&#x1F9FE; Factura #2025-001 enviada!</div>
+                          <div>&bull; Cliente: Amazon EU SARL</div>
+                          <div>&bull; Total: 2.420 &euro; (IVA 21%)</div>
+                          <div>&bull; Enviada a la AEAT &#x2705;</div>
+                          <div>&bull; Hash: 3a7f8b2c&hellip;</div>
+                          <div class="wa-ts"><span class="wa-ts-text">10:46</span></div>
+                        </div>
+                      </div>
+                      <!-- 9: User -->
+                      <div class="wa-msg wa-row wa-row-right" data-idx="9">
+                        <div class="wa-bubble-out wa-animate">
+                          ¡Esto es increíble! Gracias 🙌
+                          <div class="wa-ts">
+                            <span class="wa-ts-text">10:47</span>
+                            <svg width="15" height="10" viewBox="0 0 16 11" fill="none" aria-hidden="true"><path d="M1 5.5l3.5 3.5L11 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5.5l3.5 3.5L15 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 10: Candosa final -->
+                      <div class="wa-msg wa-row wa-row-left" data-idx="10">
+                        <div class="wa-bubble-in wa-animate">
+                          ¡Todo listo! 🎉 A partir de ahora me encargo yo. Si tienes cualquier duda, aquí estoy.
+                          <div class="wa-ts"><span class="wa-ts-text">10:47</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- CTA card — appears after chat finishes -->
+                    <div class="wa-cta-card wa-row wa-row-left" id="wa-cta" style="margin-top:5px;">
+                      <div class="wa-bubble-in wa-animate" style="max-width:84%;padding:10px 12px 8px">
+                        <p style="margin:0 0 10px;color:#111;font-size:13px;line-height:1.45;font-family:var(--lp-font)">
+                          &#x1F680; Quieres que te ayudemos con tu negocio? Podemos empezar cuando quieras.
+                        </p>
+                        <a href="https://wa.me/34911672681?text=Hola" target="_blank" rel="noopener" class="wa-cta-btn">
+                          Continuar en Candosa &rarr;
+                        </a>
+                        <div class="wa-ts" style="margin-top:4px"><span class="wa-ts-text">10:48</span></div>
+                      </div>
+                    </div>
+                    <!-- Typing indicator -->
+                    <div id="wa-typing" style="display:none; margin-top:5px;">
+                      <div class="wa-typing">
+                        <span class="wa-typing-dot wa-dot-1"></span>
+                        <span class="wa-typing-dot wa-dot-2"></span>
+                        <span class="wa-typing-dot wa-dot-3"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Input bar — static placeholder, swaps to real input after chat ends -->
+                  <div class="wa-inputbar" id="wa-inputbar">
+                    <div style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#8696A0" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                    </div>
+                    <!-- Placeholder (shown during animation) -->
+                    <div class="wa-input-pill" id="wa-input-placeholder">
+                      <span class="wa-input-placeholder">Mensaje</span>
+                      <div style="display:flex;align-items:center;gap:6px">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#8696A0" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#8696A0" aria-hidden="true"><path d="M20 5h-3.17L15 3H9L7.17 5H4C2.9 5 2 5.9 2 7v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-8 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+                      </div>
+                    </div>
+                    <!-- Real input (shown after animation) -->
+                    <input type="text" class="wa-real-input" id="wa-real-input" placeholder="Mensaje" style="display:none" aria-label="Escribe un mensaje">
+                    <!-- Mic button (during animation) -->
+                    <div class="wa-mic-btn" id="wa-mic-btn" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                    </div>
+                    <!-- Send button (after animation) -->
+                    <button class="wa-send-btn" id="wa-send-btn" style="display:none" aria-label="Enviar mensaje">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              </div><!-- end wa-phone-wrap -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Divider banner -->
+      <section class="lp-divider-section" aria-label="Mensaje destacado">
+        <div class="lp-container">
+          <p class="lp-divider-text lp-reveal"><span style="font-size:1.6em;line-height:0;vertical-align:-0.15em;color:var(--lp-accent-500);">&ldquo;</span>Toda tu administración, tus facturas y tus impuestos, <em style="font-style:italic;color:var(--lp-accent-500);">siempre en el bolsillo.</em><span style="font-size:1.6em;line-height:0;vertical-align:-0.15em;color:var(--lp-accent-500);">&rdquo;</span></p>
+          <!--  TrustBox widget  -->
+          <div style="display:flex;justify-content:center;margin-top:20px">
+            <div class="trustpilot-widget" data-locale="es-ES" data-template-id="5419b732fbfb950b10de65e5" data-businessunit-id="6654b2725c232522cca3a886" data-style-height="24px" data-style-width="100%">
+              <a href="https://es.trustpilot.com/review/candosa.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+          </div>
+          <!--  End TrustBox widget  -->
+        </div>
+      </section>
+
+      <!-- 3. How it works -->
+      <section class="lp-section" aria-labelledby="how-title">
+        <div class="lp-container">
+          <p class="lp-section-label lp-reveal">CÓMO FUNCIONA</p>
+          <h2 id="how-title" class="lp-section-title lp-reveal">Nos escribes.<br>En minutos, te asignamos<br>a alguien de confianza.</h2>
+          <p class="lp-how-subtitle lp-reveal">Sin llamadas, sin papeleo, sin esperas. Así de fácil es empezar.</p>
+          <div class="lp-steps lp-stagger" role="list">
+            <div class="lp-step lp-reveal" role="listitem">
+              <div class="lp-step-icon" aria-hidden="true">1</div>
+              <div>
+                <h3>Nos escribes</h3>
+                <p>Por WhatsApp o por la web.<br>Te hacemos un par de preguntas rápidas: tu correo y si ya eres autónomo o tienes empresa.<br>Nada más.</p>
+              </div>
+            </div>
+            <div class="lp-step lp-reveal" role="listitem">
+              <div class="lp-step-icon" aria-hidden="true">2</div>
+              <div>
+                <h3>Confirmas el pago</h3>
+                <p>Te mandamos el enlace directamente para pagar por WhatsApp. Precio fijo, sin letra pequeña.<span class="lp-step-highlight">Con 25% de descuento ya aplicado para los próximos 3 meses.</span></p>
+              </div>
+            </div>
+            <div class="lp-step lp-reveal" role="listitem">
+              <div class="lp-step-icon" aria-hidden="true">3</div>
+              <div>
+                <h3>Nos cuentas tu negocio</h3>
+                <p>Un formulario breve que respondes por WhatsApp, a tu ritmo.<br>Cuanto más nos cuentes, mejor te conocemos desde el primer día.</p>
+              </div>
+            </div>
+            <div class="lp-step lp-reveal" role="listitem">
+              <div class="lp-step-icon" aria-hidden="true">4</div>
+              <div>
+                <h3>Alguien ya está pendiente de tu negocio</h3>
+                <p>El sistema te asigna automáticamente a alguien de confianza y recibes su mensaje en minutos. Como ya sabe quién eres, ya puede empezar con tu gestión.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lp-how-footer lp-reveal">
+            <img src="images/liberfyxcandosa.webp" alt="Liberfy x Candosa" class="lp-how-logo-img" width="993" height="165" loading="lazy">
+            <div class="lp-step-partner">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Gestión experta a cargo de Liberfy, <span class="lp-mobile-break"></span>nuestros socios especialistas
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. What is Candosa -->
+      <section class="lp-section">
+        <div class="lp-container">
+          <div class="lp-whatis-grid">
+            <div>
+              <p class="lp-section-label lp-reveal">QUÉ ES CANDOSA</p>
+              <div class="lp-whatis lp-reveal">
+                <h2 class="lp-whatis-title">Tu gestoría entera,<br>en la palma de <em>tu mano.</em></h2>
+                <p>Una gestoría dedicada a conocer tu negocio. Una plataforma donde tus números están siempre al día. <strong>Y todo</strong>: preguntas, declaraciones, novedades — fluyendo por WhatsApp, de forma natural y conversacional.</p>
+                <p><strong>No hay apps nuevas que instalar.<br>No hay portales que recordar.<br>No hay formularios que rellenar.</strong></p>
+                <p>El canal que ya usas cada día, ahora al servicio de tu gestoría.</p>
+                <p>La cercanía de tener a alguien de confianza a mano. La tranquilidad de saber que todo está en orden. A cualquier hora, desde cualquier lugar.</p>
+                <a href="https://wa.me/34911672681?text=Hola" target="_blank" rel="noopener" class="lp-whatis-cta">Comienza hoy con Candosa <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+            <div class="lp-whatis-carousel lp-reveal" aria-label="Clientes de Candosa">
+              <div class="lp-carousel-stack">
+                <img src="images/writer.webp" alt="Escritora con el zorro de Candosa" class="lp-carousel-img is-active" width="760" height="1009" loading="lazy">
+                <img src="images/teacher.webp" alt="Profesor con el zorro de Candosa" class="lp-carousel-img" width="760" height="950" loading="lazy">
+                <img src="images/delivery.webp" alt="Repartidor con el zorro de Candosa" class="lp-carousel-img" width="760" height="950" loading="lazy">
+              </div>
+              <div class="lp-carousel-dots" role="tablist" aria-label="Imagen activa">
+                <button class="lp-carousel-dot is-active" role="tab" aria-selected="true" aria-label="Imagen 1"></button>
+                <button class="lp-carousel-dot" role="tab" aria-selected="false" aria-label="Imagen 2"></button>
+                <button class="lp-carousel-dot" role="tab" aria-selected="false" aria-label="Imagen 3"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Feature cards -->
+      <section class="lp-divider-section" style="padding-top:64px;padding-bottom:64px;">
+        <div class="lp-container">
+          <h2 class="lp-section-title lp-reveal" style="text-align:center;">Lo que incluye tu gestoría</h2>
+          <div class="lp-benefits-grid lp-stagger">
+            <div class="lp-benefit lp-glass lp-reveal">
+              <div class="lp-benefit-icon" aria-hidden="true">
+                <img src="images/icon_file_folder.svg" alt="" style="width:144px;height:144px;object-fit:contain" loading="lazy">
+              </div>
+              <div>
+                <h3>Todo por WhatsApp. El tuyo de siempre.</h3>
+                <p>Preguntas, documentos, declaraciones. Todo en el mismo hilo. Sin aprender nada nuevo, sin fricción, sin excusas.</p>
+              </div>
+            </div>
+            <div class="lp-benefit lp-glass lp-reveal">
+              <div class="lp-benefit-icon" aria-hidden="true">
+                <img src="images/dash.svg" alt="" style="width:144px;height:144px;object-fit:contain" loading="lazy">
+              </div>
+              <div>
+                <h3>Tu plataforma, siempre al día.</h3>
+                <p>Tus números, tus facturas, tu estado fiscal — organizados y accesibles cuando los necesitas. Sin archivos perdidos, sin confusión.</p>
+              </div>
+            </div>
+            <div class="lp-benefit lp-glass lp-reveal">
+              <div class="lp-benefit-icon" aria-hidden="true">
+                <img src="images/taxfolder.svg" alt="" style="width:144px;height:144px;object-fit:contain" loading="lazy">
+              </div>
+              <div>
+                <h3>Tu gestora. La misma. Siempre.</h3>
+                <p>Una persona que conoce tu negocio de verdad. No un equipo, no un ticket. Cuando escribes, sabes exactamente quién te responde.</p>
+              </div>
+            </div>
+            <div class="lp-benefit lp-glass lp-reveal">
+              <div class="lp-benefit-icon" aria-hidden="true">
+                <img src="images/help.svg" alt="" style="width:144px;height:144px;object-fit:contain" loading="lazy">
+              </div>
+              <div>
+                <h3>Claridad total. Sin letra pequeña.</h3>
+                <p>Entiendes lo que pagas, cuándo y por qué. Tu gestora te lo explica hasta que tenga sentido. Siempre.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. La diferencia + comparison table -->
+      <section class="lp-section">
+        <div class="lp-container">
+          <p class="lp-section-label lp-reveal" style="text-align:center;">LA DIFERENCIA</p>
+          <h2 class="lp-section-title lp-reveal" style="text-align:center;margin-bottom:16px;">Todo en un sitio. <em style="font-style:italic;color:var(--lp-accent-500);">Por fin.</em></h2>
+          <p class="lp-how-subtitle lp-reveal" style="margin-bottom:48px;">Conocimiento real. Experiencia moderna. Relación de verdad.<br>Y todo accesible por WhatsApp.<br><br>Así debería haber sido siempre.</p>
+          <table class="lp-compare lp-reveal" aria-label="Comparativa de gestorías">
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <p class="lp-compare-name">Pedrito Papeles</p>
+                  <p class="lp-compare-desc">El gestor de toda la vida. Te queremos, Pedrito. Pero no vamos a la oficina a firmar.</p>
+                </th>
+                <th>
+                  <p class="lp-compare-name">El Algoritmo</p>
+                  <p class="lp-compare-desc">Todo muy digital. Muy eficiente. Muy moderno. Imposible hablar con alguien.</p>
+                </th>
+                <th>
+                  <p class="lp-compare-name is-accent">Candosa</p>
+                  <p class="lp-compare-desc">Mucha tecnología. Aún más persona.</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alguien que conoce tu negocio</td>
+                <td><span class="lp-c-yes">✓</span></td>
+                <td><span class="lp-c-no">✗</span></td>
+                <td><span class="lp-c-yes">✓</span></td>
+              </tr>
+              <tr>
+                <td>Respuesta el mismo día</td>
+                <td><div class="lp-c-meh"><span>🏛️</span> depende del día</div></td>
+                <td><span class="lp-c-yes">✓</span></td>
+                <td><span class="lp-c-yes">✓</span></td>
+              </tr>
+              <tr>
+                <td>Sin volver a explicar tu situación</td>
+                <td><span class="lp-c-yes">✓</span></td>
+                <td><span class="lp-c-no">✗</span></td>
+                <td><span class="lp-c-yes">✓</span></td>
+              </tr>
+              <tr>
+                <td>Todo desde el móvil, sin papeles</td>
+                <td><span class="lp-c-no">✗</span></td>
+                <td><span class="lp-c-yes">✓</span></td>
+                <td><span class="lp-c-yes">✓</span></td>
+              </tr>
+              <tr>
+                <td>Te avisamos antes de que haya que preocuparse</td>
+                <td><div class="lp-c-meh"><span>🏛️</span> si se acuerdan</div></td>
+                <td><span class="lp-c-no">✗</span></td>
+                <td><span class="lp-c-yes">✓</span></td>
+              </tr>
+              <tr>
+                <td>Precio fijo, sin sorpresas</td>
+                <td><span class="lp-c-yes">✓</span></td>
+                <td><div class="lp-c-meh"><span style="color:var(--lp-accent-500)">?</span> léete la letra pequeña</div></td>
+                <td><span class="lp-c-yes">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ── Final CTA ── -->
+      <section class="lp-final-cta lp-section" aria-labelledby="final-cta-title">
+        <div class="lp-container">
+          <svg class="lp-section-illustration lp-cta-illustration lp-primary-svg lp-reveal" width="423" height="482" viewBox="0 0 423 482" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<g clip-path="url(#clip0_cta)">
+<path d="M92.2625 133.426C92.133 130.871 92.048 128.311 92.0075 125.751C91.663 105.946 91.479 85.7412 92.2085 65.9112C92.8115 49.5212 89.125 27.7962 101.308 15.0612C110.988 4.94118 121.571 5.32623 134.393 4.61123C146.015 3.98123 157.644 3.47622 169.277 3.09622C206.106 1.70122 242.949 0.671192 279.799 0.0061922C301.3 -0.263808 321.663 8.2612 321.535 32.3862C321.358 65.7262 323.721 99.1312 323.914 132.411C329.667 130.351 338.855 128.121 342.135 135.416C346.665 145.501 347.566 158.131 350.581 168.986C354.176 181.956 359.656 190.871 366.146 202.361C371.921 213.051 373.181 225.181 376.031 236.366C381.356 257.291 381.866 275.446 380.911 296.881C380.401 308.271 381.121 320.386 380.716 332.231C380.166 348.431 378.276 366.571 381.111 382.616C386.296 400.221 398.51 413.441 410.19 427.121C413.045 430.466 423.265 441.111 422.625 446.221C422.535 446.956 422.166 446.906 421.486 447.211C421.081 447.116 420.121 446.896 419.776 446.661C413.366 442.336 405.811 432.521 400.616 426.656C390.251 414.951 379.546 401.241 375.111 386.101C371.361 373.326 373.071 355.671 373.736 342.226C374.431 328.231 375.111 314.241 375.766 300.211C376.321 288.346 378.221 274.416 377.016 262.501C374.971 246.126 370.511 232.876 366.096 216.591C362.601 203.701 350.925 189.316 346.635 176.186C346.635 176.181 341.506 176.376 340.266 175.436C335.886 172.111 333.95 166.631 332.729 161.461C330.408 150.331 330.849 145.121 336.711 135.791C331.789 135.831 327.533 135.966 323.826 140.016C316.447 148.086 315.348 169.301 315.547 179.796C315.702 187.981 319.669 207.231 325.456 213.706C328.471 217.076 331.643 217.966 334.052 220.221C334.16 221.796 334.371 221.111 333.404 222.351C330.766 223.266 327.991 222.146 325.5 221.201C326.486 232.296 327.888 241.221 330.94 251.876C332.286 256.576 331.193 273.546 328.984 277.661C327.487 278.671 328.187 278.446 326.1 278.191L325.116 278.041C326.51 293.816 325.674 310.176 325.876 326.076C326.011 336.746 326.51 348.901 325.277 359.476C324.624 365.076 321.264 372.141 317.756 376.456C310.504 385.456 296.278 389.521 284.839 389.926C270.391 390.441 255.166 389.681 240.484 390.006L195.92 391.261C192.555 391.326 181.444 391.816 178.543 391.516C176.376 391.251 174.226 390.661 172.412 391.606C171.44 392.806 171.429 393.541 171.08 395.101L170.123 392.306C167.291 391.291 156.765 392.691 152.643 392.881C137.559 393.581 115.781 390.976 104.019 380.826C95.6395 373.591 95.93 361.561 95.614 351.666L95.0405 334.281C94.582 334.626 94.115 334.956 93.64 335.271C71.7135 349.861 61.8135 308.011 70.8115 294.521C74.111 289.576 74.356 289.211 79.566 285.916C69.241 279.786 66.1315 268.191 65.516 256.686C65.055 248.071 69.2265 240.391 75.0995 234.301C68.5905 224.471 66.965 215.641 66.5575 204.131C58.463 224.261 55.2955 241.521 49.203 262.111C42.0605 282.441 34.8695 295.416 36.489 317.651C38.9495 351.431 52.5515 380.516 36.7455 412.821C27.071 432.596 16.8605 461.771 0 476.976C2.5255 466.481 8.69101 457.181 13.6065 447.801C21.335 433.056 38.834 398.901 39.3735 383.236C38.9645 362.061 33.152 341.126 30.8255 320.081C28.087 295.316 36.6295 280.866 44.662 258.241C48.773 246.666 51.258 233.366 55.0985 221.586C59.0125 209.576 64.8615 198.011 67.9215 185.651C69.0525 181.061 70.351 177.226 73.4455 173.566C62.127 166.801 49.7535 153.706 61.593 139.891C68.242 132.136 82.552 133.301 92.2625 133.426Z" fill="#0F0E0D"/>
+<path d="M324.883 272.536C324.707 264.791 324.201 254.201 324.52 246.706C328.965 261.921 325.801 259.346 325.786 272.896L324.883 272.536Z" fill="#FBFBFA"/>
+<path d="M324.883 272.536L325.786 272.896C325.841 274.321 325.863 276.881 326.1 278.191L325.116 278.041C324.792 276.351 324.885 274.291 324.883 272.536Z" fill="#BAB9B8"/>
+<path d="M262.745 15.1288C268.472 14.9488 274.262 14.8738 279.967 15.4788C285.505 16.0638 292.989 17.2388 296.682 21.9288C300.782 27.1338 301.845 34.0739 302.468 40.4739C303.857 54.7389 302.846 69.4338 303.332 83.8038C304.097 106.404 305.097 129.059 305.438 151.664C305.817 176.794 305.539 201.949 305.748 227.084L305.622 306.704C305.626 310.594 305.43 314.554 305.649 318.434C305.98 324.294 306.974 330.044 306.305 335.919C305.298 344.759 303.87 353.819 296.462 359.659C291.623 363.474 285.896 365.614 279.813 366.374C272.204 367.324 264.545 366.624 256.91 366.449C248.177 366.289 239.442 366.304 230.71 366.484L173.176 368.139C160.436 368.624 147.229 370.424 134.553 368.829C129.259 367.814 122.788 366.359 118.6 362.789C111.656 356.874 111.574 346.099 110.987 337.714C110.298 327.864 111.243 317.989 110.957 308.119C110.691 298.924 110.182 289.714 110.132 280.514C110.077 270.374 110.448 260.229 110.333 250.084L109.119 180.364L108.443 91.7438C108.202 76.9288 106.247 61.7189 107.319 46.9639C107.791 40.4489 109.535 31.7888 114.039 26.7588C122.785 16.9838 139.874 18.5689 151.745 17.9739C152.041 22.0489 152.641 25.9038 155.181 29.2488C158.371 33.4538 163.144 34.6288 168.128 35.2338C181.378 36.8388 196.021 34.9139 209.38 34.5089C221.708 34.1339 234.346 34.9188 246.574 33.1188C250.163 32.5888 253.933 31.9038 256.819 29.5638C261.276 25.9488 262.151 20.5088 262.745 15.1288Z" fill="#F5F4EE"/>
+<!-- Bar 3 (tall) -->
+<g class="bar-group"><path d="M203.25 226.966C202.629 219.108 200.553 170.035 203.686 166.158C206.904 164.638 210.849 164.706 214.173 165.831C219.643 171.208 215.315 200.697 216.28 209.392C216.602 212.237 216.525 225.038 215.192 227.479L215.207 228C213.269 227.763 210.634 227.894 208.627 227.926L203.25 226.966Z" fill="#EB3302"/>
+<path d="M203.25 226.491C202.629 218.693 200.553 169.996 203.686 166.149C206.904 164.64 210.849 164.708 214.173 165.824C219.643 171.16 215.315 200.423 216.28 209.052C216.602 211.875 216.525 224.578 215.192 227C212.48 220.124 216.885 172.737 213.292 167.305C210.772 165.85 207.754 166.25 204.697 166.26C202.92 186.449 204.904 206.399 203.25 226.491Z" fill="#A41103"/></g>
+<path d="M232.399 67L233.047 67.9601L235 69.1936C234.969 72.8956 233.444 71.2341 233.779 75.1359C229.759 84.2259 220.673 98.3188 208.879 92.8213C204.63 90.8436 202.09 86.2236 199.656 82.4098C185.742 80.3034 182.644 92.7547 171.636 99.4221C169.722 101.627 168.005 104.21 165.373 105L164 104.802C164.969 102.714 166.823 99.4948 167.959 97.377C173.704 90.7081 182.294 66.3224 194.881 70.7923C198.642 72.1261 204.432 79.4704 206.011 83.3316C220.071 87.1056 223.534 75.0877 232.399 67Z" fill="#0F0E0D"/>
+<path d="M232.352 67L233 67.9762C230.768 71.9368 224.772 82.8878 221.824 85.7205C217.062 86.4203 213.786 88.2916 208.872 89C207.013 86.8531 206.899 86.3448 206 83.6039C220.041 87.4408 223.5 75.2226 232.352 67Z" fill="#A41103"/>
+<path d="M195.76 77C196.789 78.6352 198.215 80.7257 199 82.4392C185.095 80.2649 182 93.1176 171 100C171.823 96.151 172.974 94.7829 175.094 91.5172C177.945 90.9552 178.456 89.8582 180.361 87.5022C186.117 81.0063 187.565 79.1632 195.76 77Z" fill="#A41103"/>
+<path d="M179 84.4851L179.438 83.899C184.142 77.6744 187.907 71.4789 196 77.3723C187.586 79.3554 186.099 81.045 180.19 87L179 84.4851Z" fill="#F3E5E2"/>
+<path d="M209 89.1932C213.932 88.5035 217.221 86.6814 222 86C217.809 90.8258 215.217 92.6949 209 89.1932Z" fill="#E5B2AB"/>
+<path d="M179.68 85L181 87.4355C178.829 89.5272 178.247 90.5011 175 91L179.68 85Z" fill="#E5B2AB"/>
+<!-- Bar 2 -->
+<g class="bar-group"><path d="M184.663 183.258C188.24 183.091 192.858 182.345 195.906 184.526C199.368 192.346 197.706 216.615 196.764 225.873C192.345 226.075 187.911 225.982 183.491 225.954C181.37 212.974 181.301 195.924 184.663 183.258Z" fill="#EB3302"/></g>
+<path d="M158.477 114.352C159.051 116.129 165.358 115.161 167.226 114.979C189.148 112.847 210.832 114.206 232.777 114.42C238.647 114.477 254.4 112.346 258.747 113.992L259 115.138C253.03 120.214 202.895 116.989 192.492 116.999C185.65 117.006 161.799 119.389 156.732 116.002C154.183 110.137 154.673 55.6001 156.74 50C158.936 55.0718 159.013 91.8128 158.806 98.7083C161.738 98.4854 164.662 97.8594 167.57 97.322C166.43 99.4335 164.57 102.643 163.598 104.724C161.087 103.283 161.424 102.879 159.426 103.41C157.964 106.746 159.357 109.944 158.477 114.352Z" fill="#0F0E0D"/>
+<path d="M168 97C166.781 99.2317 164.794 102.625 163.755 104.824C161.072 103.301 161.432 102.874 159.298 103.435C157.735 106.961 159.224 110.34 158.283 115C158.112 110.305 157.588 102.77 158.635 98.4652C161.768 98.2296 164.892 97.568 168 97Z" fill="#A41103"/>
+<!-- Bar 4 -->
+<g class="bar-group"><path d="M223.205 186.015C226.764 186.042 230.432 185.732 233.654 187.008C235.582 191.946 234.963 220.884 234.657 227.458C231.24 227.843 225.431 228.443 222.084 227.484C218.573 224.266 219.874 189.912 223.205 186.015Z" fill="#EB3302"/>
+<path d="M222.598 227C218.221 223.818 219.843 189.853 223.995 186C224.132 200.639 221.425 211.614 223.731 226.601L222.598 227Z" fill="#A41103"/></g>
+<path d="M156.046 166C161.327 176.629 158.055 213.853 158.171 229.071C170.897 228.874 183.63 228.797 196.356 228.839C200.728 228.017 203.954 227.733 208.404 227.367C210.421 227.336 213.069 227.205 215.017 227.44L215.109 228.501C213 228.655 211.037 228.811 208.927 229.052C219.082 231.144 245.465 227.275 251 231.862C246.496 236.241 198.134 232.586 189.196 232.287C183.368 232.092 161.104 232.934 157.309 229.655C152.797 219.849 156.316 198.791 156.162 187.558C156.069 180.591 156 172.969 156.046 166Z" fill="#0F0E0D"/>
+<path d="M208.207 228.036C210.25 228.019 212.933 227.945 214.906 228.077L215 228.671C212.863 228.757 210.874 228.845 208.737 228.979C205.016 229.054 199.83 228.905 196 228.86C200.43 228.4 203.698 228.241 208.207 228.036Z" fill="#FBFBFA"/>
+<!-- Bar 1 (shortest) -->
+<g class="bar-group"><path d="M166.114 200.431C168.171 200.242 170.362 199.942 172.419 200.01C173.987 200.061 175.351 200.803 176.32 201.983C180.907 207.562 178.393 219.286 177.573 225.919C174.279 226.026 171.063 226.042 167.777 225.872C166.327 225.022 166.02 224.793 165.421 223.238C163.246 217.555 163.64 205.936 166.114 200.431Z" fill="#EB3302"/></g>
+<path d="M164.368 139C165.133 139.194 165.781 139.418 166.335 140.031C168.887 142.855 168.637 149.583 168.894 153.302C170.947 149.147 173.858 142.877 178.337 141.142C180.429 142.861 179.219 145.65 180.85 147.818C182.661 146.81 184.011 145.53 185.517 144.107C189.996 143.766 188.24 146.089 190.652 148.197C191.573 147.884 192.509 147.595 193.446 147.33C195.412 146.787 197.278 146.537 199.096 147.703C200.649 148.696 200.586 149.209 201 150.918L200.181 152.275C198.401 151.743 196.622 151.23 194.819 150.792L192.33 153.389C191.346 153.281 190.441 153.19 189.505 152.877C187.062 152.068 186.547 150.24 185.431 148.036L184.253 148.421C183.293 149.666 182.138 151.592 180.647 152.178C179.609 152.585 179.196 152.104 178.212 151.696L176.854 147.421L175.863 147.05C174.459 149.504 173.07 152.486 171.197 154.579C170.057 155.849 169.714 155.893 168.137 156C165.18 153.635 164.571 145.446 163.978 141.727C162.292 145.209 160.724 149.392 158 152.123L158.819 151.076L158.086 150.14C159.522 145.72 161.356 142.459 164.368 139Z" fill="#0F0E0D"/>
+<path d="M232 66.9917C237.257 61.3552 245.861 49.1596 255 51.2351C254.741 53.8661 246.341 58.0594 243.449 60.8675C240.911 63.0531 240.636 63.3523 239.386 66.385C237.524 69.6016 235.654 72.0223 233.422 75C233.076 71.1594 234.648 72.7948 234.679 69.1509L232.668 67.9368L232 66.9917Z" fill="#0F0E0D"/>
+<path d="M228.621 140.318C229.923 140.203 231.233 140.115 232.543 140.051C234.825 139.952 237.231 139.791 239 141.807L238.073 143.415C234.741 145.493 230.528 144.93 226.859 144.932C220.57 144.867 214.281 144.574 208 144.052C214.764 141.848 221.681 141.175 228.621 140.318Z" fill="#0F0E0D"/>
+<path d="M243.161 60.6513C247.08 59.7767 250.815 58.6414 254.791 59.109L255 59.944C249.463 63.1726 245.278 64.0581 239 66C240.28 63.0601 240.561 62.77 243.161 60.6513Z" fill="#A41103"/>
+<path d="M211.919 149.497C213.176 149.402 214.433 149.316 215.691 149.239C218.907 149.041 222.485 148.313 225 151.011L224.081 152.562L222.614 152.648C219.277 152.833 213.571 153.896 211 151.105L211.919 149.497Z" fill="#0F0E0D"/>
+<path d="M208.588 250.005C211.104 249.967 213.809 250.159 216.305 250.479C226.208 251.777 235.122 256.67 240.992 264.044C246.872 271.615 249.18 281.003 247.428 290.132C245.675 299.433 239.984 308.032 231.362 313.367C222.816 318.66 212.989 320.033 202.973 318.278C199.147 317.225 195.463 315.517 191.807 314.044C186.898 315.917 179.596 319.772 174.376 318.11C171.502 313.264 175.883 306.068 177.438 300.985C175.535 297.281 173.424 293.508 172.595 289.459C170.842 280.951 173 272.16 178.569 265.14C185.833 255.808 196.556 251.76 208.588 250.005Z" fill="#0F0E0D"/>
+<path d="M209.455 255C217.974 255.41 225.91 257.461 232.243 262.939C238.548 268.398 241.922 276.134 241.997 284.044C242.11 291.947 238.708 299.551 232.563 305.096C225.033 311.808 216.212 313.181 206.099 312.982L193.169 309.351C188.626 310.171 184.159 311.45 179.711 312.608C181.2 308.993 182.312 305.176 183.566 301.483C181.963 297.349 179.956 292.915 179.334 288.553C178.213 280.695 179.852 272.347 185.205 265.975C191.322 258.689 199.908 256.21 209.455 255Z" fill="#FBFBFA"/>
+<path d="M194.248 267C195.648 267.013 197.094 267.008 198.446 267.408C207.192 269.997 200.989 281.265 204.705 286.956C209.158 293.797 219.681 288.337 226.29 290.315C228.398 290.945 229.06 291.851 229.977 293.554C230.166 296.461 229.173 298.224 227.708 300.762C225.713 301.753 223.69 302.829 221.373 302.969C213.885 303.424 205.32 298.797 199.902 294.511C194.428 290.179 189.266 284.066 189.011 277.237C188.831 272.693 190.939 270.087 194.248 267Z" fill="#F03906"/>
+<path d="M276.239 30.8608C281.731 32.9008 279.012 40.4608 287.828 33.9858C289.905 35.6908 290.678 36.2658 292.377 38.3708C291.691 40.4758 290.831 42.1858 291.378 44.2308C292.69 46.2308 294.821 46.8358 297.101 47.6708C296.7 49.9408 296.274 52.9458 295.514 55.0458C293.488 55.9958 291.184 56.7658 289.934 58.4858C289.203 60.6058 289.997 62.1308 290.522 64.3808C288.902 65.8208 287.148 67.4708 285.433 68.7658C281.1 63.7958 279.198 64.3758 275.798 70.1458C273.677 69.6208 271.752 69.4258 270.249 67.9558C268.69 63.0958 268.268 60.0308 262.263 60.5808C260.497 59.5308 259.998 57.1608 259.33 55.1408C260.992 53.5358 262.863 51.8208 264.324 50.0658C262.696 47.8908 261.888 46.7858 259.936 44.9258C260.779 43.3958 262.809 39.3708 264.376 39.5808C273.407 40.7808 269.376 36.0608 273.066 32.2008L274.176 31.8958L276.239 30.8608Z" fill="#EB3302"/>
+<path d="M276.239 30.8608C281.731 32.9008 279.012 40.4608 287.828 33.9858C289.905 35.6908 290.678 36.2658 292.377 38.3708C291.691 40.4758 290.831 42.1858 291.378 44.2308C292.69 46.2308 294.821 46.8358 297.101 47.6708C296.7 49.9408 296.274 52.9458 295.514 55.0458C293.488 55.9958 291.184 56.7658 289.934 58.4858C289.203 60.6058 289.997 62.1308 290.522 64.3808C288.902 65.8208 287.148 67.4708 285.433 68.7658C281.1 63.7958 279.198 64.3758 275.798 70.1458C273.677 69.6208 271.752 69.4258 270.249 67.9558C268.69 63.0958 268.268 60.0308 262.263 60.5808C260.497 59.5308 259.998 57.1608 259.33 55.1408C260.992 53.5358 262.863 51.8208 264.324 50.0658C262.696 47.8908 261.888 46.7858 259.936 44.9258C260.779 43.3958 262.809 39.3708 264.376 39.5808C273.407 40.7808 269.376 36.0608 273.066 32.2008L274.176 31.8958C274.022 39.1458 270.258 40.0958 264.499 41.6658C261.772 46.4908 269.043 49.4758 262.261 54.7558C261.433 55.4008 262.001 57.0608 262.278 58.0608C264.096 59.6058 265.861 58.8758 266.885 59.4958C272.173 62.6958 269.561 73.0058 278.442 64.6508C280.764 62.4658 284.557 67.1558 288.139 64.0458C288.725 61.3508 288.042 60.9808 288.156 58.8158C288.348 55.2008 292.359 55.6158 294.924 52.9458C295.645 51.2458 295.569 51.1158 295.374 49.2208C294.45 47.4008 292.461 47.4158 290.989 46.2658C288.211 44.0958 290.27 41.3858 289.645 37.8708C285.965 32.8858 279.823 43.3108 276.239 30.8608Z" fill="#A41103"/>
+<path d="M275.488 43.5108C276.663 43.4308 277.954 43.2809 279.127 43.3959C280.848 43.5759 282.424 44.4409 283.498 45.8009C284.673 47.2959 284.998 49.2409 284.627 51.0859C283.998 54.2059 282.058 56.1359 279.551 57.8609C278.532 57.9209 277.34 58.0059 276.33 57.8359C274.478 57.5209 272.638 56.1609 271.643 54.5859C270.525 52.8209 270.306 50.6359 270.894 48.6459C271.661 46.0559 273.262 44.7858 275.488 43.5108Z" fill="#A41103"/>
+<path d="M275.705 45.1709C278.608 44.1609 281.784 45.6709 282.834 48.5559C283.884 51.4459 282.419 54.6409 279.545 55.7309C277.651 56.4509 275.516 56.0959 273.958 54.7959C272.401 53.5009 271.661 51.4659 272.023 49.4759C272.385 47.4809 273.791 45.8359 275.705 45.1709Z" fill="#FBFBFA"/>
+<path d="M104.598 204.926C103.255 199.646 99.6306 192.806 99.3676 189.556C98.2986 176.341 98.8416 162.316 98.4196 148.926C97.5146 124.586 96.9571 100.231 96.7476 75.876C96.6126 62.076 96.3945 47.911 97.411 34.126C97.888 27.656 101.875 20.181 106.813 16.071C110.019 13.636 117.395 9.471 121.459 9.326C134.961 8.836 148.963 9.20101 162.439 8.83601L251.74 6.821C263.347 6.601 275.889 5.00601 287.346 6.21601C318.249 9.48101 315.927 28.926 315.88 53.406C315.828 81.006 318.713 109.106 317.76 136.801C317.68 139.166 316.303 141.761 315.543 143.971C313.262 149.666 312.04 155.106 311.154 161.161C308.893 133.861 310.459 104.551 308.778 76.901C307.821 61.166 311.874 34.316 301.355 21.426C295.056 13.701 278.023 12.866 268.778 13.546C251.783 13.266 265.71 30.861 246.256 31.936C221.594 33.296 196.657 33.111 171.942 34.036C168.673 34.161 163.784 33.041 160.952 31.346C155.754 28.236 158.152 16.961 151.013 17.066C138.48 17.136 122.024 17.396 112.961 27.401C104.485 36.761 105.867 50.881 105.931 62.461L105.895 90.811C105.922 126.201 106.193 161.991 105.766 197.371C105.825 201.001 105.859 204.631 105.868 208.261L104.867 207.466L104.598 204.926Z" fill="#FBFBFA"/>
+<path d="M105.766 197.371C105.825 201.001 105.859 204.631 105.868 208.261L104.868 207.466L104.599 204.926C105.771 203.236 105.649 199.616 105.766 197.371Z" fill="#D5D4D2"/>
+<path d="M212.075 20.1761C215.589 19.8961 219.654 19.5761 222.862 21.2711C223.568 21.6461 223.52 21.6961 223.729 22.4461C223.641 22.5611 223.566 22.6861 223.466 22.7911C219.882 26.4861 206.66 24.9711 201.797 24.9461C198.989 24.9861 195.5 25.3811 192.781 24.7711C191.349 24.4511 190.942 24.2261 190.188 23.0061L190.718 22.1611C195.701 19.6561 206.261 20.4461 212.075 20.1761Z" fill="#0F0E0D"/>
+<path d="M231.871 18.2508C233.019 17.6558 234.397 17.7209 235.48 18.4259C236.563 19.1309 237.185 20.3608 237.109 21.6508C237.032 22.9408 236.269 24.0908 235.11 24.6608C233.342 25.5308 231.204 24.8158 230.316 23.0558C229.428 21.3008 230.122 19.1558 231.871 18.2508Z" fill="#0F0E0D"/>
+<path d="M311.018 194.026C313.01 200.716 316.581 209.111 317.683 215.386C318.181 218.226 317.977 227.566 317.98 230.966C317.959 239.131 318.03 247.301 318.191 255.461L319.5 309.031C319.849 323.631 321.166 348.346 318.033 362.131C312.802 385.151 282.803 383.456 264.076 383.061C256.208 382.916 248.339 382.981 240.475 383.266L172.061 385.111C153.226 385.661 139.504 388.496 120.881 382.851C100.394 376.636 101.645 366.236 101.716 347.281C101.737 341.441 101.418 335.011 101.646 329.101C101.863 323.456 103.144 317.666 102.789 311.981C101.596 302.081 99.1895 294.976 99.8705 284.576C100.476 275.326 105.11 272.711 105.064 263.176C105.013 252.731 99.1005 246.931 99.6325 236.766C99.9615 230.481 102.468 227.951 104.363 221.706L105.903 221.311C106.01 238.826 107.128 256.166 107.041 273.801C106.925 297.091 107.272 321.196 109.019 344.451C109.531 351.276 111.855 362.701 116.467 367.626C121.205 372.686 129.472 375.406 136.177 376.381C180.478 376.766 225.63 373.256 269.923 374.946C294.12 375.871 314.077 365.481 311.618 338.476C310.916 330.771 310.74 322.036 310.82 314.281L311.018 194.026Z" fill="#FBFBFA"/>
+<path d="M77.0322 236.476C79.2417 237.046 80.8417 237.481 83.1062 237.731C85.6687 238.016 91.8312 236.931 93.7397 237.781C93.9732 239.231 93.5442 239.796 92.3572 240.736L91.8617 241.441C93.0132 244.411 94.7092 246.916 96.1242 249.731C100.905 259.226 101.38 275.621 89.7797 280.411C84.8137 282.461 80.3662 280.636 77.1842 276.626C69.3042 260.046 67.0087 252.316 77.0322 236.476Z" fill="#FBFBFA"/>
+<path d="M72.7519 256.106C77.7609 244.761 88.9729 246.841 93.0539 258.371L93.1749 258.721C89.8999 260.766 87.2619 262.261 84.7649 265.486C82.3739 268.571 81.5569 273.281 79.3279 276.381C79.2999 276.421 77.4919 276.621 77.1834 276.626C77.6199 267.356 81.6059 261.371 89.7294 257.091C82.0929 244.296 77.3324 254.086 73.0734 261.596C71.6999 260.441 72.3554 257.646 72.7519 256.106Z" fill="#0F0E0D"/>
+<path d="M76.2096 322.946C72.8986 314.896 70.1926 306.121 73.8051 297.616C75.7851 292.951 79.5601 289.281 84.2776 287.436C85.7006 286.891 92.5076 285.041 93.7561 285.386C94.4696 288.371 91.5921 292.751 92.0716 293.871C96.5616 304.351 103.509 327.351 87.4691 331.661C82.3166 333.041 79.5796 330.721 77.3576 325.946C77.3916 325.726 77.5051 324.831 77.5881 324.671L76.2096 322.946Z" fill="#FBFBFA"/>
+<path d="M86.4567 312.601L86.2632 311.906C85.5777 309.481 84.7137 306.821 82.6532 305.206C78.0267 304.141 77.3377 313.256 74.4567 314.811C72.6522 312.766 75.2277 306.686 77.0047 305.041C78.1202 303.991 79.6157 303.446 81.1447 303.521C87.2802 303.826 89.1317 310.251 90.1992 315.136C82.8457 317.851 82.5202 318.546 77.5882 324.671L76.2097 322.946C79.4232 316.706 80.0212 315.406 86.4567 312.601Z" fill="#0F0E0D"/>
+<path d="M90.5371 136.611L91.8406 136.561C93.7651 140.191 92.7431 168.556 92.6796 174.071C85.8996 172.046 79.7136 170.091 73.5271 166.571C69.0451 163.726 64.5806 160.126 63.1851 154.756C62.3341 151.481 62.5956 147.621 64.4681 144.746C69.2996 137.331 82.6891 138.021 90.5371 136.611Z" fill="#FBFBFA"/>
+<path d="M91.5884 180.846L92.5114 180.951C92.5909 181.066 92.6854 181.171 92.7499 181.296C93.3514 182.456 93.5279 185.216 93.0439 186.416C91.9334 186.521 91.2259 186.686 90.2074 187.141C90.1709 188.841 91.8179 190.386 92.7724 191.801C97.9789 199.506 101.221 209.721 99.2439 218.976C98.2314 223.716 95.8684 228.741 91.5549 231.306C88.8214 232.931 85.7479 233.176 82.7204 232.321C81.0779 231.861 79.4269 231.161 78.6114 229.556C77.7479 227.861 78.2684 226.556 78.9059 224.911L79.1294 224.341C80.9239 219.086 82.8564 215.341 87.4064 211.976C88.9519 210.836 90.5124 209.886 91.7009 208.341C91.8414 206.971 91.8519 206.401 90.9644 205.276C89.0284 202.831 83.4379 200.146 80.3554 199.996C76.8469 199.831 74.3094 202.221 71.8184 204.326C72.3339 201.876 72.9994 199.351 73.9219 197.021C77.3249 188.441 83.4734 184.381 91.5884 180.846Z" fill="#FBFBFA"/>
+<path d="M338.051 138.206C338.411 138.461 338.446 138.451 338.741 138.866C338.901 139.091 345.601 171.116 345.486 171.561C345.341 172.131 344.031 172.531 343.501 172.786C339.856 170.831 338.236 167.361 337.056 163.571C334.289 154.681 333.691 146.561 338.051 138.206Z" fill="#FBFBFA"/>
+<path d="M78.6439 202.906C82.2144 203.196 85.1514 205.266 88.1119 207.091C83.1479 210.061 80.4424 212.886 77.8469 218.041L75.4644 223.546C74.2369 218.941 71.1309 212.211 72.9269 207.536C73.8959 205.011 76.3859 203.991 78.6439 202.906Z" fill="#FBFBFA"/>
+<path d="M74.2311 173.821C78.4611 175.931 82.5526 177.546 87.1976 178.486C83.2981 179.916 79.9826 181.366 76.6886 183.936C74.1866 186.471 72.1201 189.131 70.0576 192.016C71.3891 185.936 72.7806 179.871 74.2311 173.821Z" fill="#FBFBFA"/>
+<path d="M104.867 207.466L105.868 208.261L105.884 217.366L104.987 217.501C104.75 215.401 104.879 209.826 104.867 207.466Z" fill="#999896"/>
+<path d="M104.987 217.501L105.884 217.366L105.903 221.311L104.363 221.706L104.987 217.501Z" fill="#D5D4D2"/>
+<path d="M171.081 395.101C171.43 393.541 171.441 392.806 172.413 391.606C174.227 390.661 176.377 391.251 178.544 391.516C176.472 391.726 174.396 391.901 172.319 392.041C185.787 402.876 198.494 417.916 211.811 426.831C218.233 431.126 225.298 434.371 232.741 436.446C240.655 438.666 248.506 439.756 255.704 444.111C264.585 449.486 272.031 457.721 278.555 465.731C282.651 470.756 287.146 474.731 286.89 481.461H283.613C274.941 474.866 265.427 458.206 254.554 451.421C246.245 446.236 240.809 445.586 231.688 443.031C213.025 437.811 202.66 428.451 189.148 415.361C183.977 428.496 178.124 435.226 166.962 443.701C162.718 446.926 159.972 449.206 156.356 453.896C150.563 461.406 147.811 474.796 140.071 480.331C139.361 480.841 139.312 480.596 138.464 480.276C138.196 479.626 137.977 479.036 137.909 478.326C137.38 472.776 151.295 449.451 155.358 445.396C161.08 439.681 168.464 435.856 173.988 429.796C178.838 424.471 181.819 417.891 186.487 412.451C182.382 407.051 175.975 401.421 171.081 395.101Z" fill="#0F0E0D"/>
+<path d="M359.556 205.036L360.621 205.666L360.351 206.446C357.826 208.086 354.626 208.956 351.801 209.976C351.346 209.901 350.966 209.646 350.551 209.436L350.776 208.626C353.166 206.506 356.491 205.626 359.556 205.036Z" fill="#0F0E0D"/>
+<path d="M357.136 212.641C358.321 212.441 359.661 212.111 360.851 212.361C361.661 212.531 361.541 212.616 361.981 213.236C360.826 214.411 359.851 214.501 358.321 214.931C356.596 215.041 354.841 215.316 353.226 214.556C352.766 214.341 352.966 214.446 352.716 213.771C354.021 212.671 355.506 212.761 357.136 212.641Z" fill="#0F0E0D"/>
+</g>
+<defs>
+<clipPath id="clip0_cta">
+<rect width="422.654" height="481.461" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+          <h2 id="final-cta-title">Cuando estés listo,<br>aquí estamos.</h2>
+          <p class="lp-final-cta-sub">Escríbenos y cuéntanos a qué te dedicas.<br>Sin formularios largos, sin esperas.<br>Tu nueva gestoría te está esperando.</p>
+          <a href="https://wa.me/34911672681?text=Hola" target="_blank" rel="noopener" class="lp-cta-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Hablemos por WhatsApp
+          </a>
+          <p class="lp-final-cta-reassurance">Sin gestores que no te conocen &middot; Sin esperar tres días para una respuesta &middot; Sin enterarte del plazo el día antes</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="lp-footer">
+      <div class="lp-footer-inner">
+        <div class="lp-footer-brand">
+          <a href="/es/" class="lp-nav-logo" aria-label="Candosa">
+            <img src="images/Exclude.svg" alt="" aria-hidden="true" width="28" height="28">
+            <img src="images/Vector.svg" alt="Candosa" width="128" height="24">
+          </a>
+          <p>La gestoría que cabe en tu móvil.</p>
+        </div>
+        <div class="lp-footer-col">
+          <h4>Candosa</h4>
+          <ul>
+            <li><a href="/es/">Inicio</a></li>
+            <li><a href="/es/about/">Sobre nosotros</a></li>
+            <li><a href="/es/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="lp-footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/34911672681?text=Hola" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="tel:+34911672681">+34 911 672 681</a></li>
+            <li><a href="mailto:hola@candosa.com">hola@candosa.com</a></li>
+          </ul>
+        </div>
+        <div class="lp-footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/es/privacidad/">Política de privacidad</a></li>
+            <li><a href="/es/terminos/">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lp-footer-bottom">
+        <p>&copy; 2026 Candosa</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Testimonial click-to-feature -->
+  <script>
+  (function() {
+    var grid = document.getElementById('testimonials-grid');
+    var cards = document.querySelectorAll('[data-testimonial]');
+    if (!grid || cards.length < 2) return;
+
+    cards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        if (card.classList.contains('featured')) return;
+        cards.forEach(function(c) { c.classList.remove('featured'); });
+        card.classList.add('featured');
+        grid.classList.toggle('flipped');
+      });
+    });
+  })();
+  </script>
+
+  <!-- Position nav below promo banner -->
+  <script>
+  (function() {
+    var promo = document.querySelector('.lp-promo');
+    var nav = document.querySelector('.lp-nav-outer');
+    if (!promo || !nav) return;
+    function positionNav() {
+      nav.style.top = (promo.offsetHeight + 8) + 'px';
+    }
+    positionNav();
+    window.addEventListener('resize', positionNav);
+  })();
+  </script>
+
+  <!-- Background blobs — mouse reactive -->
+  <script>
+  (function() {
+    var b1 = document.getElementById('blob1');
+    var b2 = document.getElementById('blob2');
+    var b3 = document.getElementById('blob3');
+    if (!b1) return;
+
+    var mx = 0, my = 0;
+    var cx = 0, cy = 0;
+
+    if (!window.matchMedia('(pointer: fine)').matches) {
+      b1.style.left = '60vw'; b1.style.top = '5vh';
+      b2.style.left = '5vw';  b2.style.top = '60vh';
+      b3.style.left = '35vw'; b3.style.top = '35vh';
+      return;
+    }
+
+    document.addEventListener('mousemove', function(e) {
+      mx = (e.clientX / window.innerWidth - 0.5) * 2;
+      my = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    function tick() {
+      cx += (mx - cx) * 0.06;
+      cy += (my - cy) * 0.06;
+
+      b1.style.left = (50 + cx * 25) + 'vw';
+      b1.style.top  = (5 + cy * 20) + 'vh';
+
+      b2.style.left = (10 - cx * 18) + 'vw';
+      b2.style.top  = (55 - cy * 16) + 'vh';
+
+      b3.style.left = (35 + cx * 12) + 'vw';
+      b3.style.top  = (30 + cy * 14) + 'vh';
+
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+  </script>
+
+  <!-- Carousel auto-rotate -->
+  <script>
+  (function() {
+    var imgs = document.querySelectorAll('.lp-carousel-img');
+    var dots = document.querySelectorAll('.lp-carousel-dot');
+    if (!imgs.length) return;
+    var current = 0;
+    var timer;
+
+    function go(idx) {
+      imgs[current].classList.remove('is-active');
+      dots[current].classList.remove('is-active');
+      dots[current].setAttribute('aria-selected', 'false');
+      current = idx % imgs.length;
+      imgs[current].classList.add('is-active');
+      dots[current].classList.add('is-active');
+      dots[current].setAttribute('aria-selected', 'true');
+    }
+
+    function startTimer() {
+      timer = setInterval(function() { go(current + 1); }, 3500);
+    }
+
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() {
+        clearInterval(timer);
+        go(i);
+        startTimer();
+      });
+    });
+
+    startTimer();
+  })();
+  </script>
+
+  <!-- Scroll reveal observer -->
+  <script>
+  (function() {
+    var els = document.querySelectorAll('.lp-reveal, .lp-final-cta');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(el) { el.classList.add('in-view'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(el) { io.observe(el); });
+  })();
+  </script>
+
+  <!-- WhatsApp chat animation -->
+  <script>
+  (function() {
+    var msgs = document.querySelectorAll('.wa-msg');
+    var typing = document.getElementById('wa-typing');
+    var chat = document.getElementById('wa-chat');
+    var ctaCard = document.getElementById('wa-cta');
+    var inputPlaceholder = document.getElementById('wa-input-placeholder');
+    var realInput = document.getElementById('wa-real-input');
+    var micBtn = document.getElementById('wa-mic-btn');
+    var sendBtn = document.getElementById('wa-send-btn');
+    var msgsInner = document.getElementById('wa-msgs');
+    if (!msgs.length || !typing || !chat) return;
+
+    var timings = [
+      [700, 1900],  // 0 candosa intro
+      [750, 0],     // 1 user
+      [500, 1000],  // 2 candosa
+      [750, 0],     // 3 user
+      [500, 1400],  // 4 candosa
+      [750, 0],     // 5 user
+      [500, 900],   // 6 candosa
+      [750, 0],     // 7 user
+      [500, 2200],  // 8 candosa invoice
+      [750, 0],     // 9 user
+      [500, 1300],  // 10 candosa final
+    ];
+
+    var current = 0;
+    var msgCount = msgs.length;
+
+    function scrollToBottom() {
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function enableInput() {
+      // Show CTA card
+      if (ctaCard) { ctaCard.classList.add('visible'); scrollToBottom(); }
+      // Swap placeholder for real input
+      if (inputPlaceholder) inputPlaceholder.style.display = 'none';
+      if (realInput) realInput.style.display = 'block';
+      if (micBtn) micBtn.style.display = 'none';
+      if (sendBtn) sendBtn.style.display = 'flex';
+    }
+
+    function addUserBubble(text) {
+      var row = document.createElement('div');
+      row.className = 'wa-row wa-row-right';
+      row.innerHTML = '<div class="wa-bubble-out wa-animate">' + text +
+        '<div class="wa-ts"><span class="wa-ts-text">10:' + (48 + Math.floor(Math.random() * 10)) + '</span>' +
+        '<svg width="15" height="10" viewBox="0 0 16 11" fill="none" aria-hidden="true"><path d="M1 5.5l3.5 3.5L11 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5.5l3.5 3.5L15 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>';
+      msgsInner.appendChild(row);
+      scrollToBottom();
+    }
+
+    function sendMessage() {
+      if (!realInput) return;
+      var text = realInput.value.trim();
+      if (!text) return;
+      // Escape HTML
+      var div = document.createElement('div');
+      div.textContent = text;
+      addUserBubble(div.innerHTML);
+      realInput.value = '';
+    }
+
+    if (realInput) {
+      realInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') sendMessage();
+      });
+    }
+    if (sendBtn) {
+      sendBtn.addEventListener('click', sendMessage);
+    }
+
+    function showNext() {
+      if (current >= msgs.length) {
+        // Animation complete — enable input & CTA
+        setTimeout(enableInput, 600);
+        return;
+      }
+      var t = timings[current] || [500, 1000];
+      var preDelay = t[0];
+      var typingMs = t[1];
+
+      setTimeout(function() {
+        if (typingMs > 0) {
+          typing.style.display = 'block';
+          scrollToBottom();
+          setTimeout(function() {
+            typing.style.display = 'none';
+            msgs[current].classList.add('visible');
+            scrollToBottom();
+            current++;
+            showNext();
+          }, typingMs);
+        } else {
+          msgs[current].classList.add('visible');
+          scrollToBottom();
+          current++;
+          showNext();
+        }
+      }, preDelay);
+    }
+
+    // Start when phone enters viewport
+    var phone = document.querySelector('.wa-phone');
+    if ('IntersectionObserver' in window && phone) {
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+          observer.disconnect();
+          showNext();
+        }
+      }, { threshold: 0.3 });
+      observer.observe(phone);
+    } else {
+      showNext();
+    }
+  })();
+  </script>
+</body>
+</html>
