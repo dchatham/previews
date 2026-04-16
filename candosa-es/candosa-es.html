@@ -215,6 +215,7 @@
       z-index: 10000;
       display: flex;
       flex-direction: column;
+      gap: 0;
     }
     .lp-promo {
       position: relative;
@@ -226,6 +227,7 @@
       text-align: center;
       padding: 8px 24px;
       line-height: 1.4;
+      margin: 0;
     }
     @media screen and (max-width: 991px) {
       .lp-promo { font-size: 12px; padding: 10px 20px; }
@@ -234,10 +236,10 @@
     /* ── Navigation — full-width bar below promo ── */
     .lp-nav-outer {
       position: relative;
-      -webkit-backdrop-filter: blur(20px) saturate(1.2);
-      backdrop-filter: blur(20px) saturate(1.2);
-      background: rgba(245, 240, 235, 0.85);
+      margin: 0;
+      background: #F5F0EB;
       border-bottom: 1px solid rgba(17,33,45,0.08);
+      box-shadow: 0 6px 20px rgba(10,13,18,0.08), 0 2px 4px rgba(10,13,18,0.04);
     }
     .lp-nav {
       position: relative;
@@ -246,6 +248,7 @@
       justify-content: space-between;
       padding: 12px 24px;
       max-width: 1152px;
+      width: 100%;
       margin: 0 auto;
     }
     .lp-nav-logo {
@@ -2199,19 +2202,6 @@
   })();
   </script>
 
-  <!-- Position nav below promo banner -->
-  <script>
-  (function() {
-    var promo = document.querySelector('.lp-promo');
-    var nav = document.querySelector('.lp-nav-outer');
-    if (!promo || !nav) return;
-    function positionNav() {
-      nav.style.top = (promo.offsetHeight + 8) + 'px';
-    }
-    positionNav();
-    window.addEventListener('resize', positionNav);
-  })();
-  </script>
 
   <!-- Background blobs — mouse reactive -->
   <script>
